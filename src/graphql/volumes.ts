@@ -1,0 +1,1 @@
+// Here goes a graphql gql query string
