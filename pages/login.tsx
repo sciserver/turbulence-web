@@ -1,7 +1,7 @@
-import { VerifyLoginToken } from '../components/content/login/login';
+import { Login } from '../components/content/login/login';
 
-export default function Login() {
+export default function LoginPage() {
   return <>
-    <VerifyLoginToken />
+    <Login />
   </>;
 }

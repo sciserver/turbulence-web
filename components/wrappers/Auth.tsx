@@ -26,22 +26,24 @@ export const AuthWrapper: FC<Props> = ({ children }) => {
     setCheckedAuth(true);
   };
 
-  useEffect(() => {
-    if (!checkedAuth) {
-      checkAuth();
-    }
+  // UNcomment the following code if you want automatic redirection to login page in the absence of a token
 
-  }, []);
+  // useEffect(() => {
+  //   if (!checkedAuth) {
+  //     checkAuth();
+  //   }
 
-  useEffect(() => {
-    if (checkedAuth) {
-      if (isAuthenticatedLocal) {
-        router.push('/');
-        return;
-      }
-      router.push('/login');
-    }
-  }, [isAuthenticatedLocal, checkedAuth]);
+  // }, []);
+
+  // useEffect(() => {
+  //   if (checkedAuth) {
+  //     if (isAuthenticatedLocal) {
+  //       router.push('/');
+  //       return;
+  //     }
+  //     router.push('/login');
+  //   }
+  // }, [isAuthenticatedLocal, checkedAuth]);
 
   return (
     <>
