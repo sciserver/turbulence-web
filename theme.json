@@ -24,9 +24,9 @@
       "default": "#fafafa"
     },
     "primary": {
-      "light": "rgba(28, 188, 141, 0.6)",
-      "main": "rgba(28, 188, 141, 1)",
-      "dark": "rgba(70, 131, 197, 1)",
+      "light": "##CED6F2",
+      "main": "#899ce1",
+      "dark": "#2a44a2",
       "contrastText": "#fff"
     },
     "secondary": {
