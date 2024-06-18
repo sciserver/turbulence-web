@@ -52,14 +52,14 @@ export const Banner = () => {
   }, [isLoading]);
 
   return <Styled {...{ bannerwidth }}>
-    <Image
+    {/* <Image
       style={!isLoading ? {} : { display: 'none' }}
       src={banner}
       width={bannerwidth}
       height={200}
       alt="Tubulence simulation visualization gif"
       onLoad={() => setIsLoading(false)}
-    />
+    /> */}
     <h1 className="centered">Johns Hopkins Turbulence Databases</h1>
   </Styled>;
 };
