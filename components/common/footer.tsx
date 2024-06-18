@@ -7,10 +7,10 @@ import nsf from '../../public/nsf-logo.png';
 import idies from '../../public/idies-logo.png';
 import sciserver from '../../public/sciserver-logo.png';
 
-const Styled = styled.div<{ footerWidth: number }>`  
+const Styled = styled.div<{ footerwidth: number }>`  
   padding: 10px 30px;
   background: linear-gradient(90deg, rgb(206,214, 242) 1%, rgb(50, 72, 150, 0.8) 60%,rgb(186, 57, 64,0.6) 100%);
-  width: ${props => props.footerWidth};
+  width: ${props => props.footerwidth};
   height: auto;
   
   .agency {
@@ -22,7 +22,7 @@ const Styled = styled.div<{ footerWidth: number }>`
 
 export const Footer = () => {
 
-  const [footerWidth, setFooterWidth] = useState<number>(0);
+  const [footerwidth, setFooterWidth] = useState<number>(0);
 
   const handleWindowResize = () => {
     setFooterWidth(window.innerWidth);
@@ -34,7 +34,7 @@ export const Footer = () => {
     setFooterWidth(window.innerWidth);
   }, []);
 
-  return <Styled {...{ footerWidth }}>
+  return <Styled {...{ footerwidth }}>
     <div className="agency">
       <span className="caption">The JHTDB project is funded by the US <Link href="https://www.nsf.gov" target="_blank">National Science Foundation</Link>. </span>
       <Image src={nsf} width={45} alt="NSF logo" />
