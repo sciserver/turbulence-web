@@ -1,0 +1,29 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [  "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set outputs
+      id: vars
+      run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+    - shell: bash
+      env:
+        PASS: ${{ secrets.DOCKERHUB_PASS }}
+        USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      name: Log in to Docker Hub
+      run: docker login containers.repo.sciserver.org -p "$PASS" -u "$USERNAME" 
+    - name: Build the Docker image
+      run: docker build --file Dockerfile --tag containers.repo.sciserver.org/turbulence-web:${{ steps.vars.outputs.sha_short }} .
+    - name: Push docker image to registry
+      run: docker push containers.repo.sciserver.org/turbulence-web:${{ steps.vars.outputs.sha_short }}
