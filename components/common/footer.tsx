@@ -7,7 +7,7 @@ import nsf from '../../public/nsf-logo.png';
 import idies from '../../public/idies-logo.png';
 import sciserver from '../../public/sciserver-logo.png';
 
-const Styled = styled.div`  
+const Styled = styled.div<{ footerWidth: number }>`  
   padding: 10px 30px;
   background: linear-gradient(90deg, rgb(206,214, 242) 1%, rgb(50, 72, 150, 0.8) 60%,rgb(186, 57, 64,0.6) 100%);
   width: ${props => props.footerWidth};
