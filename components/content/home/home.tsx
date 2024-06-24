@@ -36,7 +36,7 @@ export const Home: FC = () => {
         <p>
           Access to the data is facilitated by a Web services interface that permits numerical
           experiments to be run across the Internet. We offer C, Fortran and Matlab interfaces
-          layered above <Link color='primary' href='/databaseAccess/webServices'>Web Services </Link>
+          layered above <Link color='primary' href='/database/webServices'>Web Services </Link>
           so that scientists can use familiar programming tools on their client platforms.
           Calls to fetch subsets of the data can be made directly from within a program being
           executed on the client's platform. <Link href='https://turbulence.pha.jhu.edu/webquery/query.aspx' target='_blank'>Manual queries </Link>

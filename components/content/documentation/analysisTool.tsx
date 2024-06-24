@@ -1,8 +1,9 @@
 import Image from 'next/image';
-import { FC } from 'react';
+import { FC, useContext, useEffect } from 'react';
 import styled from 'styled-components';
 
 import mainImage from '../../../public/JHTDB2_snapshots.png';
+import { AppContext } from '../../../context';
 
 const Styled = styled.div`
   display: flex;
@@ -10,6 +11,13 @@ const Styled = styled.div`
 `;
 
 export const AnalysisTool: FC = () => {
+
+  const { setTabOption } = useContext(AppContext);
+
+  // ON MOUNT: UI config
+  useEffect(() => {
+    setTabOption('documentation');
+  }, []);
 
   return (
     <Styled>
