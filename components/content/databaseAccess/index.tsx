@@ -1,5 +1,7 @@
-import { FC } from 'react';
+import { FC, useContext, useEffect } from 'react';
 import styled from 'styled-components';
+
+import { AppContext } from '../../../context';
 
 
 const Styled = styled.div`
@@ -7,7 +9,14 @@ const Styled = styled.div`
 
 `;
 
-export const WebServices: FC = () => {
+export const DatabaseAccess: FC = () => {
+
+  const { setTabOption } = useContext(AppContext);
+
+  // ON MOUNT: UI config
+  useEffect(() => {
+    setTabOption('database');
+  }, []);
 
   return (
     <Styled>

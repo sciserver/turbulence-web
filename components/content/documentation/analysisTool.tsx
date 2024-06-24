@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { FC } from 'react';
 import styled from 'styled-components';
 
-import mainImage from '../../../public/fig4-1.jpg';
+import mainImage from '../../../public/JHTDB2_snapshots.png';
 
 const Styled = styled.div`
   display: flex;

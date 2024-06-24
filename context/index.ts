@@ -11,11 +11,11 @@ export const UserContext = createContext<UserContextInterface>({
 });
 
 interface AppContextInterface {
-  menuOption: string;
-  setMenuOption: (option: string) => void;
+  tabOption: string;
+  setTabOption: (option: string) => void;
 }
 
 export const AppContext = createContext<AppContextInterface>({
-  menuOption: 'datasets',
-  setMenuOption: (option) => { }
+  tabOption: 'home',
+  setTabOption: (option) => { }
 });

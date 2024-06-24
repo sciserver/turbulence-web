@@ -10,6 +10,11 @@ interface Props {
   children: any
 }
 
+export type TabOption = {
+  name: string
+  value: string
+}
+
 const Styled = styled.div`
   a {
     color: ${({ theme }) => theme.palette.primary.dark};

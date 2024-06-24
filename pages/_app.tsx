@@ -1,11 +1,13 @@
 import type { AppProps } from 'next/app';
+import Head from 'next/head';
 import { ApolloProvider } from "@apollo/client";
 import { createTheme, ThemeProvider } from '@mui/material';
 import { createGlobalStyle, ThemeProvider as StyledThemeProvider } from 'styled-components';
+
+import '../styles/globals.css';
 import client from "../apollo-client";
 import themeJSON from '../theme.json';
-import '../styles/globals.css';
-import Head from 'next/head';
+import { ContextWrapper } from '../components/wrappers/Context';
 
 export default function App({ Component, pageProps }: AppProps) {
 
@@ -69,11 +71,13 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <GlobalStyle />
       <ApolloProvider client={client}>
-        <ThemeProvider theme={theme}>
-          <StyledThemeProvider theme={theme}>
-            <Component {...pageProps} />
-          </StyledThemeProvider>
-        </ThemeProvider>
+        <ContextWrapper>
+          <ThemeProvider theme={theme}>
+            <StyledThemeProvider theme={theme}>
+              <Component {...pageProps} />
+            </StyledThemeProvider>
+          </ThemeProvider>
+        </ContextWrapper>
       </ApolloProvider>
     </>
   );

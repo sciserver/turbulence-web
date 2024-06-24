@@ -1,9 +1,10 @@
+import { FC, useContext, useEffect } from 'react';
 import Image from 'next/image';
-import { FC } from 'react';
+import Link from 'next/link';
 import styled from 'styled-components';
 
-import mainImage from '../../../public/fig4-1.jpg';
-import Link from 'next/link';
+import mainImage from '../../../public/JHTDB2_snapshots.png';
+import { AppContext } from '../../../context';
 
 const Styled = styled.div`
   display: flex;
@@ -14,6 +15,13 @@ const Styled = styled.div`
 `;
 
 export const Home: FC = () => {
+
+  const { setTabOption } = useContext(AppContext);
+
+  // ON MOUNT: UI config
+  useEffect(() => {
+    setTabOption('home');
+  }, []);
 
   return (
     <Styled>
