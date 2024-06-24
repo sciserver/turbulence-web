@@ -1,20 +1,11 @@
-import { useEffect } from "react";
-import { useRouter } from "next/router";
+import { Layout } from "../components/common/layout";
+import { Home } from "../components/content/home/home";
 
 // TODO: imp loading animation here
-export default function Index() {
-  const router = useRouter();
-
-  // ON MOUNT: UI config
-  useEffect(() => {
-    if (!router.isReady) {
-      return;
-    }
-    console.log(router.basePath);
-
-    if (!router.basePath) {
-      router.push('/home');
-    }
-  }, [router]);
-  return <></>;
+export default function HomePage() {
+  return <>
+    <Layout>
+      <Home />
+    </Layout>
+  </>;
 };
