@@ -30,9 +30,7 @@
       "contrastText": "#fff"
     },
     "secondary": {
-      "light": "rgb(141, 221, 198, 0.6)",
-      "main": "rgb(141, 221, 198, 1)",
-      "dark": "rgb(141, 221, 198, 1)",
+      "main": "#705880",
       "contrastText": "#fff"
     },
     "error": {
@@ -179,6 +177,14 @@
         "font-size": "14px",
         "line-height": "16.41px",
         "letter-spacing": "0.1px"
+      }
+    },
+    "MuiCard": {
+      "root": {
+        "&:hover": {
+          "cursor": "pointer",
+          "box-shadow": "rgba(0, 0, 0, 0.2) 0px 5px 5px 0px, rgba(0, 0, 0, 0.14) 0px 8px 10px 0px, rgba(0, 0, 0, 0.12) 0px 3px 14px 0px"
+        }
       }
     }
   }
