@@ -26,10 +26,8 @@ export const Layout: FC<Props> = ({ children }) => {
     <Styled>
       <Banner />
       <TabMenu />
-      <Alert severity="error">
-        June-13th-2024. Currently filedb datasets - channeldb5200, rotstrat4096, transition_bl are not available due to
-        a hardware related failure. Our IT team is working on fixing the issue. We will update this message once this
-        is resolved. For past announcements, please <Link href="https://turbulence.pha.jhu.edu/announcements.aspx">click here</Link>
+      <Alert severity="success">
+        <strong>NOTICE:</strong> June-26th-2024: All services are functioning normally. For past announcements, please <Link href="https://turbulence.pha.jhu.edu/announcements.aspx">click here</Link>
       </Alert>
       <main>{children}</main>
       <Footer />
