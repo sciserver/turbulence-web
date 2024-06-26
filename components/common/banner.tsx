@@ -5,11 +5,11 @@ const Styled = styled.div<{ bannerwidth: number }>`
   position: relative;
   text-align: center;
   color: white;
-  background-image: url("Smokesheet-snapshot-JHTDB.mp4");
+  background-image: url("/web/Smokesheet-snapshot-JHTDB.mp4");
   background-size: ${props => props.bannerwidth}px 200px;
   height: 200px;
   width: ${props => props.bannerwidth};
-
+  
   h1
   {
     text-shadow: 0px 0px 5px #000000cc;
