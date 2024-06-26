@@ -8,10 +8,31 @@ import { AppContext } from '../../../context';
 
 const Styled = styled.div`
   display: flex;
+  gap: 30px;
+
   .points {
     display: flex;
     justify-content: center;
   }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    
+    h2{
+      font-family: "Roboto Slab", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 45px;
+      text-align: right;
+      margin-bottom: 0px;
+    }
+  }
+
+  .content {
+    padding-top: 35px;
+  }
+
 `;
 
 export const Home: FC = () => {
@@ -25,8 +46,11 @@ export const Home: FC = () => {
 
   return (
     <Styled>
-      <div>
-        <h2>Welcome to the Johns Hopkins Turbulence Database (JHTDB) site</h2>
+      <div className="header">
+        <h2>Welcome to the Johns Hopkins Turbulence Database <br /> JHTDB </h2>
+        <Image src={mainImage} height={250} alt="Turbulence figure 1" />
+      </div>
+      <div className="content">
         <p>
           This website is a portal to an Open Numerical Turbulence Laboratory that
           enables access to multi-Terabyte turbulence databases. The data reside on
@@ -64,9 +88,7 @@ export const Home: FC = () => {
           <h3>548,379,625,412,859 points queried</h3>
         </div>
       </div>
-      <div>
-        <Image src={mainImage} width={400} height={400} alt="Turbulence figure 1" />
-      </div>
+
     </Styled>
   );
 };

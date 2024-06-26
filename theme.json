@@ -176,7 +176,8 @@
         "font-style": "normal",
         "font-size": "14px",
         "line-height": "16.41px",
-        "letter-spacing": "0.1px"
+        "letter-spacing": "0.1px",
+        "font-family": "\"Roboto Slab\", serif"
       }
     },
     "MuiCard": {

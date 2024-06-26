@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
   }
 
   main {
-    margin: 30px 50px;
+    margin: 10px 50px 30px 100px;
   }
 
   h2, h3 {
@@ -43,6 +43,8 @@ export default function App({ Component, pageProps }: AppProps) {
   p {
     font-family: "Noto Sans", sans-serif;
     font-style: normal;
+    font-size: 18px;
+    color: #666;
   }
   
   .caption {
@@ -65,9 +67,8 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Slabo+27px&display=swap" rel="stylesheet" />
       </Head>
       <GlobalStyle />
       <ApolloProvider client={client}>
