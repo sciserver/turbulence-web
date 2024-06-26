@@ -34,7 +34,7 @@ export const DatabaseAccess: FC = () => {
       title: 'Web Browser',
       type: 'External link',
       description: 'You will be able to query the JHTDB directly from this resource on our website.',
-      onClick: () => { router.push('/database/browser') }
+      onClick: () => { router.replace('https://turbulence.pha.jhu.edu/webquery/query.aspx') }
     },
     {
       title: 'Web services interface',
