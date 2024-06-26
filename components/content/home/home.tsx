@@ -7,19 +7,16 @@ import mainImage from '../../../public/JHTDB2_snapshots.png';
 import { AppContext } from '../../../context';
 
 const Styled = styled.div`
-  display: flex;
-  gap: 30px;
-
   .points {
     display: flex;
     justify-content: center;
   }
-
+  
   .header {
     display: flex;
     flex-direction: column;
     
-    h2{
+    h2 {
       font-family: "Roboto Slab", serif;
       font-weight: 400;
       font-style: normal;
@@ -28,11 +25,15 @@ const Styled = styled.div`
       margin-bottom: 0px;
     }
   }
-
+      
   .content {
     padding-top: 35px;
+    }
+    
+  @media (width >= 800px) {
+    display: flex;
+    gap: 30px;
   }
-
 `;
 
 export const Home: FC = () => {
