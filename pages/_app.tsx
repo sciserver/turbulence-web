@@ -33,11 +33,11 @@ export default function App({ Component, pageProps }: AppProps) {
     margin: 10px 50px 30px 100px;
   }
 
-  h2, h3 {
-    font-family: "Noto Sans", sans-serif;
+  h2, h3, h4, h5 {
+    font-family: "Roboto Slab", serif;
+      font-weight: 600;
+      font-style: normal;
     font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
   }
   
   p {

@@ -6,39 +6,40 @@ import styled from 'styled-components';
 import nsf from '../../public/nsf-logo.png';
 import idies from '../../public/idies-logo.png';
 import sciserver from '../../public/sciserver-logo.png';
+import { useRouter } from 'next/router';
 
 const Styled = styled.footer<{ footerwidth: number }>`  
   display: flex;
   flex-direction: column;
   gap: 30px;
-  position: fixed;
   bottom: 0px;
   left: 0px;
   right: 0px;
-  margin-bottom: 0px;
-  padding: 30px;
-  background: linear-gradient(90deg, rgb(206,214, 242) 1%, rgb(50, 72, 150, 0.8) 60%,rgb(186, 57, 64,0.6) 100%);
+  margin-bottom: 50px;
   width: ${props => props.footerwidth};
   height: auto;
+  
+  .sponsors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   
   .agencies {
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    align-self: center;
-  }
-
-  .agency {
-    display: flex;
     align-items: center;
-    gap: 10px;
-    max-width: 270px;
   }
 
   .info {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 100px;
+    padding: 30px 150px;
+    color: white;
+
+    background: linear-gradient(90deg, rgb(206,214, 242) 1%, rgb(50, 72, 150, 0.8) 60%,rgb(186, 57, 64,0.6) 100%);
 
     .contact {
       min-width: 300px;
@@ -47,6 +48,8 @@ const Styled = styled.footer<{ footerwidth: number }>`
 `;
 
 export const Footer = () => {
+
+  const router = useRouter();
 
   const [footerwidth, setFooterWidth] = useState<number>(0);
 
@@ -61,20 +64,6 @@ export const Footer = () => {
   }, []);
 
   return <Styled {...{ footerwidth }}>
-    <div className="agencies">
-      <div className="agency">
-        <span className="caption">The JHTDB project is funded by the US <Link href="https://www.nsf.gov" target="_blank">National Science Foundation</Link>. </span>
-        <Image src={nsf} width={45} alt="National Science Foundation (NSF) logo" />
-      </div>
-      <div className="agency">
-        <span className="caption"> JHTDB operations are supported by <Link href="http://idies.jhu.edu/" target="_blank">IDIES</Link>.</span>
-        <Image src={idies} height={25} alt="Institute for Data Intensive Engineering and Science (IDIES) logo" />
-      </div>
-      <div className="agency">
-        <span className="caption"> JHTDB data may also be accessed via <Link href="https://www.sciserver.org/datasets/" target="_blank">SciServer</Link>.</span>
-        <Image src={sciserver} height={45} alt="Sciserver logo" />
-      </div>
-    </div>
     <div className="info">
       <div className="contact">
         <span className="caption">
@@ -90,5 +79,19 @@ export const Footer = () => {
         Last updated: 9/24/2020 12:01:37 PM
       </span>
     </div>
-  </Styled>;
+    <div className="sponsors">
+      <h4>JHTDB operates with support from:</h4>
+      <div className="agencies">
+        <Link href="https://www.nsf.gov" target="_blank">
+          <Image src={nsf} width={75} alt="National Science Foundation (NSF) logo" />
+        </Link>
+        <Link href="http://idies.jhu.edu/" target="_blank">
+          <Image src={idies} height={45} alt="Institute for Data Intensive Engineering and Science (IDIES) logo" />
+        </Link>
+        <Link href="https://www.sciserver.org/" target="_blank">
+          <Image src={sciserver} height={75} alt="Sciserver logo" />
+        </Link>
+      </div>
+    </div>
+  </Styled >;
 };
