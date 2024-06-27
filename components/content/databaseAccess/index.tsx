@@ -31,33 +31,38 @@ export const DatabaseAccess: FC = () => {
 
   const dbAccesssDirectory: CardLayout[] = [
     {
-      title: 'Web Browser',
+      title: 'Web browser pointwise',
       type: 'External link',
-      description: 'You will be able to query the JHTDB directly from this resource on our website.',
+      description: 'Directly obtain data using single-point virtual sensor method.',
       onClick: () => { router.replace('https://turbulence.pha.jhu.edu/webquery/query.aspx') }
     },
     {
-      title: 'Web services interface',
+      title: 'Matlab Local',
       type: 'Guide',
-      description: 'Accessing JHTDB is made possible through the use of Web Services. \
-                    We provide instructions and example code that support various popular programming languages.',
+      description: 'Matlab code including demo to be executed on user\'s remote computer to access arrays of data using \
+                    virtual sensor array method.',
       onClick: () => { router.push('/database/webServices') }
     },
     {
-      title: 'Download Data Cutout',
-      type: 'External link',
-      description: 'The cutout service is hosted on SciServer, a cloud-based data-driven cluster by IDIES. \
-                    It offers reliable and fast data access and generates output in HDF5 format and an XDMF file \
-                    for visualization in Paraview. Users must create a SciServer account to use the service.',
-      onClick: () => { router.replace('http://turbulence.idies.jhu.edu/cutout/') }
+      title: 'Python Local',
+      type: 'Guide',
+      description: 'Python code (jupyter notebook) including demo to be executed on user\'s remote computer to access \
+      arrays of data using virtual sensor array method.',
+      onClick: () => { router.push('/database/webServices') }
     },
     {
-      title: 'Matlab Analysis Tools',
+      title: 'Python Sciserver',
       type: 'Guide',
-      description: 'Turbmat-Tools is a Matlab package containing six pre-written scripts that utilize the Turbmat package to retrieve, \
-                    process, and display data from the JHTDB Cluster. The Turbot package serves as a wrapper for \
-                    Matlab web service functions used to access the JHTDB Cluster.',
-      onClick: () => { router.push('/database/matlabAnalysisTools') }
+      description: 'Python code (jupyter notebook) including demo to be executed on user\'s Sciserver environment to access \
+      arrays of data using virtual sensor array method. Users must create a SciServer account to use this service.',
+      onClick: () => { router.push('/database/webServices') }
+    },
+    {
+      title: 'Cutout Service',
+      type: 'External link',
+      description: 'Submit requests for gridded raw data. The service generates output in HDF5 format and an XDMF file for \
+                     (e.g.) visualization in Paraview. Users must create a SciServer account to use this service.',
+      onClick: () => { router.replace('http://turbulence.idies.jhu.edu/cutout/') }
     }
   ];
 
