@@ -1,10 +1,11 @@
 import { Layout } from "../../components/common/layout";
+import { About } from "../../components/content/about/about";
 
 // TODO: imp loading animation here
 export default function AboutPage() {
   return <>
     <Layout>
-      <h1>About</h1>
+      <About />
     </Layout>
   </>;
 };

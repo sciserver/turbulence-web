@@ -33,7 +33,7 @@ export const TabMenu: FC = () => {
     { name: 'Home', value: 'home' },
     { name: 'Database Access', value: 'database' },
     { name: 'Documentation', value: 'documentation' },
-    { name: 'Links', value: 'links' },
+    { name: 'Resources', value: 'resources' },
     { name: 'Visualizations', value: 'visualizations' },
     { name: 'About', value: 'about' }
   ];
