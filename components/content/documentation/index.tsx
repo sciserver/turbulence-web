@@ -49,18 +49,6 @@ export const Documentation: FC = () => {
       type: 'Guide',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat orci sit amet arcu accumsan, non sodales lacus porta. Pellentesque diam libero, luctus a ornare eu, interdum vel ex. Morbi sodales felis ante, cursus venenatis lectus vehicula sed. Donec lacus dui, tincidunt id eros at, lobortis rutrum ipsum. Cras at est vel leo interdum convallis. Curabitur rhoncus lacus magna, nec ultrices enim vestibulum sit amet. Aenean gravida mollis odio at aliquet. Quisque ultricies eros nec metus scelerisque, et congue leo feugiat. Maecenas interdum ligula quis vehicula convallis. Ut at interdum lacus. Donec at leo non nulla aliquet pellentesque et gravida orci. Fusce dapibus egestas orci eu tempus. Nam ut erat tempus, consequat ligula id, pellentesque nisl.',
       onClick: () => { router.push('/documentation/citing') }
-    },
-    {
-      title: 'Analysis Tool',
-      type: 'Guide',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat orci sit amet arcu accumsan, non sodales lacus porta. Pellentesque diam libero, luctus a ornare eu, interdum vel ex. Morbi sodales felis ante, cursus venenatis lectus vehicula sed. Donec lacus dui, tincidunt id eros at, lobortis rutrum ipsum. Cras at est vel leo interdum convallis. Curabitur rhoncus lacus magna, nec ultrices enim vestibulum sit amet. Aenean gravida mollis odio at aliquet. Quisque ultricies eros nec metus scelerisque, et congue leo feugiat. Maecenas interdum ligula quis vehicula convallis. Ut at interdum lacus. Donec at leo non nulla aliquet pellentesque et gravida orci. Fusce dapibus egestas orci eu tempus. Nam ut erat tempus, consequat ligula id, pellentesque nisl.',
-      onClick: () => { router.push('/documentation/analysisTool') }
-    },
-    {
-      title: 'Tutorials',
-      type: 'Guide',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat orci sit amet arcu accumsan, non sodales lacus porta. Pellentesque diam libero, luctus a ornare eu, interdum vel ex. Morbi sodales felis ante, cursus venenatis lectus vehicula sed. Donec lacus dui, tincidunt id eros at, lobortis rutrum ipsum. Cras at est vel leo interdum convallis. Curabitur rhoncus lacus magna, nec ultrices enim vestibulum sit amet. Aenean gravida mollis odio at aliquet. Quisque ultricies eros nec metus scelerisque, et congue leo feugiat. Maecenas interdum ligula quis vehicula convallis. Ut at interdum lacus. Donec at leo non nulla aliquet pellentesque et gravida orci. Fusce dapibus egestas orci eu tempus. Nam ut erat tempus, consequat ligula id, pellentesque nisl.',
-      onClick: () => { router.push('/database/tutorials') }
     }
   ];
 
