@@ -7,7 +7,7 @@ import '../styles/globals.css';
 import themeJSON from '../theme.json';
 import { ContextWrapper } from '../components/wrappers/Context';
 
-export const hostURL = `${process.env.NEXT_PUBLIC_HOST_BASE_PATH}${process.env.NEXT_PUBLIC_BASE_PATH}/`;
+export const hostURL = `${process.env.NEXT_PUBLIC_HOST_BASE_PATH}`;
 
 export default function App({ Component, pageProps }: AppProps) {
 
