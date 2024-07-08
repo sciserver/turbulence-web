@@ -41,7 +41,7 @@ export const TabMenu: FC = () => {
   return (
     <StyledTabs value={tabOption} onChange={handleTabChange} centered color="secondary">
       {tabOptions.map(tab =>
-        <StyledTab label={tab.name} value={tab.value} onClick={tabOption === tab.value ? handleSameOptionClick : () => { }} />
+        <StyledTab key={tab.name} label={tab.name} value={tab.value} onClick={tabOption === tab.value ? handleSameOptionClick : () => { }} />
       )}
     </StyledTabs>
   );

@@ -8,7 +8,7 @@ import { Download as DownloadIcon } from '@mui/icons-material';
 
 import mainImage from '../../../public/JHTDB2_snapshots.png';
 import { AppContext } from '../../../context';
-import { BreadCrumbsStyled } from '../../common/breadcrumbs';
+import { BreadCrumbParent, BreadCrumbsStyled } from '../../common/breadcrumbs';
 
 const Styled = styled.div`
   .content {
@@ -31,9 +31,13 @@ export const MatlabAnalysisTools: FC = () => {
     setTabOption('database');
   }, []);
 
+  const breadCrumbsParents: BreadCrumbParent[] = [
+    { name: 'Database Access', url: '/database' }
+  ]
+
   return (
     <Styled>
-      <BreadCrumbsStyled parent="Database Access" componentName="Matlab Analysis Tools" parentURL="/database" />
+      <BreadCrumbsStyled parents={breadCrumbsParents} componentName="Matlab Analysis Tools" />
       <div className="content">
         <div>
           <br />

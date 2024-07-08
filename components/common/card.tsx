@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { styled } from 'styled-components';
-import { Button, Card, CardActions, CardContent, Chip, Grid } from '@mui/material';
+import { Button, Card, CardActions, CardContent, CardMedia, Chip } from '@mui/material';
 
 
 const StyledCard = styled(Card)`
@@ -24,20 +24,34 @@ const StyledCard = styled(Card)`
 
 export type CardLayout = {
   title: string
-  type: string
-  description: string
   onClick: () => void
+  description?: string
+  type?: string
+  subtitle?: string
+  mediaSource?: string
 }
 
-export const CardStyled: FC<CardLayout> = ({ title, type, description, onClick }) => {
+export const CardStyled: FC<CardLayout> = ({ title, onClick, description, type, mediaSource, subtitle }) => {
+
   return (
     <StyledCard onClick={onClick} >
+      {mediaSource &&
+        <CardMedia
+          sx={{ height: 140, width: 550 }}
+          image={mediaSource}
+        />
+      }
       <CardContent>
-        <h3>{title} </h3>
-        <Chip size="small" className="tag" label={type} variant="outlined" color="secondary" />
-        <p>
-          {description}
-        </p>
+        <h3 dangerouslySetInnerHTML={{ __html: title }}></h3>
+        {subtitle &&
+          <h5 dangerouslySetInnerHTML={{ __html: subtitle }}></h5>
+        }
+        {type &&
+          <Chip size="small" className="tag" label={type} variant="outlined" color="secondary" />
+        }
+        {description &&
+          <p dangerouslySetInnerHTML={{ __html: description }}></p>
+        }
       </CardContent>
       <CardActions>
         <Button onClick={onClick} size="small">Learn More</Button>

@@ -17,9 +17,6 @@ const Styled = styled.div`
     flex-direction: column;
     
     h2 {
-      font-family: "Roboto Slab", serif;
-      font-weight: 400;
-      font-style: normal;
       font-size: 45px;
       text-align: right;
       margin-bottom: 0px;

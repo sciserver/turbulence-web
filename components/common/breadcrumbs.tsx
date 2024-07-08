@@ -10,13 +10,17 @@ const StyledBreadcrumbs = styled(Breadcrumbs)`
   }
 `;
 
+export type BreadCrumbParent = {
+  name: string
+  url: string
+}
+
 interface Props {
-  parent: string
-  parentURL: string
+  parents: Array<BreadCrumbParent>
   componentName: string
 }
 
-export const BreadCrumbsStyled: FC<Props> = ({ parent, parentURL, componentName }) => {
+export const BreadCrumbsStyled: FC<Props> = ({ parents, componentName }) => {
 
   const router = useRouter();
 
@@ -29,11 +33,13 @@ export const BreadCrumbsStyled: FC<Props> = ({ parent, parentURL, componentName 
         label="Home"
         icon={<HomeIcon fontSize="small" />}
       />
-      <Chip
-        variant="outlined"
-        component="a"
-        onClick={() => router.push(`/${parentURL}`)}
-        label={parent} />
+      {parents.map(p =>
+        <Chip
+          variant="outlined"
+          component="a"
+          onClick={() => router.push(`/${p.url}`)}
+          label={p.name} />
+      )}
       <Chip
         variant="outlined"
         label={componentName}

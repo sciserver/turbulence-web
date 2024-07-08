@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { hostURL } from '../../pages/_app';
 
 const Styled = styled.div<{ bannerwidth: number }>`  
   position: relative;
   text-align: center;
   color: white;
-  background-image: url("https://kubetest.sciserver.org/peppermint-juli/turbulence/web/Smokesheet-snapshot-JHTDB.mp4");
+  background-image: url("${hostURL}Smokesheet-snapshot-JHTDB.mp4");
   background-size: ${props => props.bannerwidth}px 200px;
   height: 200px;
   width: ${props => props.bannerwidth};

@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import { Grid } from '@mui/material';
 
 import { AppContext } from '../../../context';
-import { CardLayout, CardStyled } from '../../common/card';
 
 
 const Styled = styled.div`

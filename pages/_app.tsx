@@ -1,13 +1,13 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { ApolloProvider } from "@apollo/client";
 import { createTheme, ThemeProvider } from '@mui/material';
 import { createGlobalStyle, ThemeProvider as StyledThemeProvider } from 'styled-components';
 
 import '../styles/globals.css';
-import client from "../apollo-client";
 import themeJSON from '../theme.json';
 import { ContextWrapper } from '../components/wrappers/Context';
+
+export const hostURL = `${process.env.NEXT_PUBLIC_HOST_BASE_PATH}${process.env.NEXT_PUBLIC_BASE_PATH}/`;
 
 export default function App({ Component, pageProps }: AppProps) {
 
@@ -35,7 +35,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   h2, h3, h4, h5 {
     font-family: "Roboto Slab", serif;
-      font-weight: 600;
+      font-weight: 400;
       font-style: normal;
     font-optical-sizing: auto;
   }
@@ -71,15 +71,13 @@ export default function App({ Component, pageProps }: AppProps) {
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Slabo+27px&display=swap" rel="stylesheet" />
       </Head>
       <GlobalStyle />
-      <ApolloProvider client={client}>
-        <ContextWrapper>
-          <ThemeProvider theme={theme}>
-            <StyledThemeProvider theme={theme}>
-              <Component {...pageProps} />
-            </StyledThemeProvider>
-          </ThemeProvider>
-        </ContextWrapper>
-      </ApolloProvider>
+      <ContextWrapper>
+        <ThemeProvider theme={theme}>
+          <StyledThemeProvider theme={theme}>
+            <Component {...pageProps} />
+          </StyledThemeProvider>
+        </ThemeProvider>
+      </ContextWrapper>
     </>
   );
 }

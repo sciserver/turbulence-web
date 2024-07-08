@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import mainImage from '../../../public/JHTDB2_snapshots.png';
 import { AppContext } from '../../../context';
-import { BreadCrumbsStyled } from '../../common/breadcrumbs';
+import { BreadCrumbParent, BreadCrumbsStyled } from '../../common/breadcrumbs';
 
 const Styled = styled.div`
   .content {
@@ -21,9 +21,13 @@ export const WebServices: FC = () => {
     setTabOption('database');
   }, []);
 
+  const breadCrumbsParents: BreadCrumbParent[] = [
+    { name: 'Database Access', url: '/database' }
+  ]
+
   return (
     <Styled>
-      <BreadCrumbsStyled parent="Database Access" componentName="Web Services" parentURL="/database" />
+      <BreadCrumbsStyled parents={breadCrumbsParents} componentName="Web Services" />
       <div className="content">
         <div>
           <h2>Instructions to access via Web services interface</h2>
