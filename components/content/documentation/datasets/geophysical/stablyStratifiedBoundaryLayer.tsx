@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import { AppContext } from '../../../../../context';
 import { BreadCrumbParent, BreadCrumbsStyled } from '../../../../common/breadcrumbs';
 import stablyImage from '../../../../../public/datasets/stablyStratified.png'
+import { hostURL } from '../../../../../pages/_app';
 
 const Styled = styled.div`
   .header {
@@ -57,7 +58,7 @@ export const StablyStratifiedBoundaryLayer: FC = () => {
         </div>
         <div className="content">
           <h3>Simulation data provenance: Dataset generated at NCAR using the NCAR Large Eddy Simulation code</h3>
-          <span className="caption">See <Link href="turbulence.pha.jhu.edu/docs/README-CHANNEL.pdf" target="_blank">README-SABLE2048.pdf</Link> for more details</span>
+          <span className="caption">See <Link href={`${hostURL}docs/README_SABL2048.pdf`} target="_blank" download>README-SABLE2048.pdf</Link> for more details</span>
           <br />
           <br />
           <span>
