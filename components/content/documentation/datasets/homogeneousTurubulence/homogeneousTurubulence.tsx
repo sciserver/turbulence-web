@@ -33,7 +33,7 @@ export const HomogeneousTurbulence: FC = () => {
       title: 'Isotropic Turbulence on <i>1,024</i><sup>3</sup> mesh',
       subtitle: 'isotropic1024coarse',
       description: 'Direct numerical simulation (DNS) for which full time evolution is available, over 5 large-scale turnover times.',
-      onClick: () => { router.push('/documentation/datasets/homogeneousTurbulence/isotropicTurbulence') },
+      onClick: () => { router.push('/documentation/datasets/homogeneousTurbulence/isotropic') },
       mediaSource: `${hostURL}datasets/iso1024-large.png`
     },
     {

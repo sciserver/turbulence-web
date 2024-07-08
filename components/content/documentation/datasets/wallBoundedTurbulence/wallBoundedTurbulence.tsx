@@ -63,7 +63,7 @@ export const WallBoundedTurbulence: FC = () => {
 
   return (
     <Styled>
-      <BreadCrumbsStyled parents={breadCrumbsParents} componentName="Wall Bounded Turbulence Dataset" />
+      <BreadCrumbsStyled parents={breadCrumbsParents} componentName="Wall Bounded Turbulence" />
       <h2>Wall Bounded Turbulence</h2>
       <Grid container alignItems="stretch">
         {datasetsList.map(i =>

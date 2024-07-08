@@ -49,7 +49,7 @@ export const BuoyancyTurbulence: FC = () => {
 
   return (
     <Styled>
-      <BreadCrumbsStyled parents={breadCrumbsParents} componentName="Bouyancy Turbulence" />
+      <BreadCrumbsStyled parents={breadCrumbsParents} componentName="HBDT" />
       <div className="page">
         <div className="header">
           <h2>Homogeneous Buoyancy Driven Turbulence</h2>
