@@ -30,7 +30,7 @@ export const WallBoundedTurbulence: FC = () => {
 
   const datasetsList: CardLayout[] = [
     {
-      title: 'Channel Flow at <i>Re</i><sub>T</sub><i>=1000</i>',
+      title: 'Channel Flow at <i>Re</i><sub>τ</sub><i>=1000</i>',
       subtitle: 'channel',
       description: 'Direct numerical simulation (DNS) of channel flow turbulence in a domain of size <i>8π × 2 × 3π</i>, \
                     using <i>2048 × 512 × 1536</i> nodes. The full time evolution is available, over a flow-through time \
@@ -39,7 +39,7 @@ export const WallBoundedTurbulence: FC = () => {
       mediaSource: `${hostURL}datasets/channel-large-banner.jpeg`
     },
     {
-      title: 'Channel Flow at <i>Re</i><sub>T</sub><i>=5,200</i>',
+      title: 'Channel Flow at <i>Re</i><sub>τ</sub><i>=5,200</i>',
       subtitle: 'channel5200',
       description: 'DNS of channel flow turbulence in a domain of size <i>8π × 2 × 3π</i>, using <i>10240 × 1536 × 7680</i> \
                     nodes. A total of 11 snapshots are available.',
