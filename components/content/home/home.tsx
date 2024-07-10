@@ -13,13 +13,20 @@ const Styled = styled.div`
     display: flex;
     justify-content: center;
   }
+
+
+  img.responsive {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+  }
   
   .header {
     display: flex;
     flex-direction: column;
     
     h2 {
-      font-size: 45px;
+      font-size: 2.5rem;
       text-align: right;
       margin-bottom: 0px;
     }
@@ -49,7 +56,7 @@ export const Home: FC = () => {
     <Styled>
       <div className="header">
         <h2>Welcome to the Johns Hopkins Turbulence Database <br /> JHTDB </h2>
-        <Image src={mainImage} height={250} alt="Turbulence figure 1" />
+        <Image className="responsive" src={mainImage} height={250} alt="Turbulence figure 1" />
       </div>
       <div className="content">
         <p>

@@ -33,16 +33,23 @@ const Styled = styled.footer<{ footerwidth: number }>`
   }
 
   .info {
-    display: flex;
-    align-items: center;
-    gap: 100px;
+    @media (width >= 800px)  {
+      display: flex;
+      align-items: center;
+      gap: 100px;
+    }
     padding: 30px 150px;
     color: white;
-
+    
     background: linear-gradient(90deg, rgb(206,214, 242) 1%, rgb(50, 72, 150, 0.8) 60%,rgb(186, 57, 64,0.6) 100%);
-
+    
     .contact {
-      min-width: 300px;
+      @media (width < 800px)  {
+        margin-bottom: 7%;
+      }
+      @media (width >= 1000px)  {
+        min-width: 300px;
+      }
     }
   }
 `;
