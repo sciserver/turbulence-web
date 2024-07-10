@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { hostURL } from '../../pages/_app';
+import { hostURL } from 'pages/_app';
 
 const Styled = styled.div<{ bannerwidth: number }>`  
   position: relative;

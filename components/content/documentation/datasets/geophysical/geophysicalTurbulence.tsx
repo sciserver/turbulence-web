@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { Grid } from '@mui/material';
 import { useRouter } from 'next/router';
 
-import { AppContext } from '../../../../../context';
-import { CardLayout, CardStyled } from '../../../../common/card';
-import { hostURL } from '../../../../../pages/_app';
-import { BreadCrumbParent, BreadCrumbsStyled } from '../../../../common/breadcrumbs';
+import { AppContext } from 'context';
+import { hostURL } from 'pages/_app';
+import { CardLayout, CardStyled } from 'components/common/card';
+import { BreadCrumbParent, BreadCrumbsStyled } from 'components/common/breadcrumbs';
 
 const Styled = styled.div`
     .card-list {
@@ -25,7 +25,7 @@ export const GeophysicalTurbulence: FC = () => {
 
   // ON MOUNT: UI config
   useEffect(() => {
-    setTabOption('documentation');
+    setTabOption(router.asPath.split('/')[1]);
   }, []);
 
   const datasetsList: CardLayout[] = [
@@ -33,7 +33,7 @@ export const GeophysicalTurbulence: FC = () => {
       title: 'Rotating Stratified Turbulence on <i>4,094</i><sup>3</sup> mesh',
       subtitle: 'rotstrat4096',
       description: 'Direct numerical simulation (DNS) of rotating stratified homogeneous turbulence, for which total of 5 snapshots are available.',
-      onClick: () => { router.push('/documentation/datasets/geophysicalTurbulence/rst') },
+      onClick: () => { router.push('/datasets/geophysicalTurbulence/rst') },
       mediaSource: `${hostURL}datasets/rotstrat4096.jpg`
     },
     {
@@ -41,14 +41,13 @@ export const GeophysicalTurbulence: FC = () => {
       subtitle: '(COMING SOON)',
       description: 'Large Eddy Simulation (LES) of stably stratified ABL flow on on <i>2,048</i><sup>3</sup> mesh. A time history of 100 time-steps \
                     (“sabl2048high”) and 20 statistically independent snapshots (“sable2048low”) are available.',
-      onClick: () => { router.push('/documentation/datasets/geophysicalTurbulence/sabl') },
+      onClick: () => { router.push('/datasets/geophysicalTurbulence/sabl') },
       mediaSource: `${hostURL}datasets/boundaryLayer.png`
     }
   ];
 
   const breadCrumbsParents: BreadCrumbParent[] = [
-    { name: 'Documentation', url: '/documentation' },
-    { name: 'Datasets', url: '/documentation/datasets' }
+    { name: 'Datasets', url: '/datasets' }
   ];
 
   return (

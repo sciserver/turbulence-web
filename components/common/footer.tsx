@@ -3,9 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import nsf from '../../public/nsf-logo.png';
-import idies from '../../public/idies-logo.png';
-import sciserver from '../../public/sciserver-logo.png';
+import nsf from 'public/nsf-logo.png';
+import idies from 'public/idies-logo.png';
+import sciserver from 'public/sciserver-logo.png';
 import { useRouter } from 'next/router';
 
 const Styled = styled.footer<{ footerwidth: number }>`  

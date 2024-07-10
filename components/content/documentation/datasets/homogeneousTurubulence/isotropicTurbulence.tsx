@@ -1,11 +1,13 @@
 import { FC, useContext, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
 import styled from 'styled-components';
 
-import { AppContext } from '../../../../../context';
-import { BreadCrumbParent, BreadCrumbsStyled } from '../../../../common/breadcrumbs';
-import mainImage from '../../../../../public/datasets/isotropic.jpg'
+import { AppContext } from 'context';
+import { BreadCrumbParent, BreadCrumbsStyled } from 'components/common/breadcrumbs';
+
+import mainImage from 'public/datasets/isotropic.jpg';
 
 const Styled = styled.div`
   .header {
@@ -34,17 +36,17 @@ const Styled = styled.div`
 
 export const IsotropicTurbulence: FC = () => {
 
+  const router = useRouter();
   const { setTabOption } = useContext(AppContext);
 
   // ON MOUNT: UI config
   useEffect(() => {
-    setTabOption('documentation');
+    setTabOption(router.asPath.split('/')[1]);
   }, []);
 
   const breadCrumbsParents: BreadCrumbParent[] = [
-    { name: 'Documentation', url: '/documentation' },
-    { name: 'Datasets', url: '/documentation/datasets' },
-    { name: 'Homogeneous Turbulence', url: '/documentation/datasets/homogeneousTurbulence' }
+    { name: 'Datasets', url: '/datasets' },
+    { name: 'Homogeneous Turbulence', url: '/datasets/homogeneousTurbulence' }
   ];
 
   return (

@@ -6,9 +6,10 @@ import styled from 'styled-components';
 import { Chip, Typography } from '@mui/material';
 import { Download as DownloadIcon } from '@mui/icons-material';
 
-import mainImage from '../../../public/JHTDB2_snapshots.png';
-import { AppContext } from '../../../context';
-import { BreadCrumbParent, BreadCrumbsStyled } from '../../common/breadcrumbs';
+import { AppContext } from 'context';
+import { BreadCrumbParent, BreadCrumbsStyled } from 'components/common/breadcrumbs';
+
+import mainImage from 'public/JHTDB2_snapshots.png';
 
 const Styled = styled.div`
   .content {
@@ -28,7 +29,7 @@ export const MatlabAnalysisTools: FC = () => {
 
   // ON MOUNT: UI config
   useEffect(() => {
-    setTabOption('database');
+    setTabOption(router.asPath.split('/')[1]);
   }, []);
 
   const breadCrumbsParents: BreadCrumbParent[] = [
@@ -50,13 +51,15 @@ export const MatlabAnalysisTools: FC = () => {
           <Chip
             className="download-links"
             component="a"
-            onClick={() => router.replace('https://turbulence.pha.jhu.edu/download/Turbmat-Tools-0.3.2.tar.gz')}
+            href="https://turbulence.pha.jhu.edu/download/Turbmat-Tools-0.3.2.tar.gz"
+            target="_blank"
             label="Download tar.gz here"
             icon={<DownloadIcon fontSize="small" />}
           />
           <Chip
             component="a"
-            onClick={() => router.replace('https://turbulence.pha.jhu.edu/download/Turbmat-Tools-0.3.2.zip')}
+            href="https://turbulence.pha.jhu.edu/download/Turbmat-Tools-0.3.2.zip"
+            target="_blank"
             label="Download zip here"
             icon={<DownloadIcon fontSize="small" />}
           />

@@ -21,5 +21,25 @@ module.exports = withTM({
   compiler: {
     styledComponents: true,
   },
+  async redirects() {
+    return [
+      // Basic redirect
+      {
+        source: '/',
+        destination: '/home',
+        permanent: true
+      },
+      {
+        source: '/database/query',
+        destination: 'https://turbulence.pha.jhu.edu/webquery/query.aspx',
+        permanent: false
+      },
+      {
+        source: '/database/cutout',
+        destination: 'http://turbulence.idies.jhu.edu/cutout/',
+        permanent: true
+      }
+    ]
+  }
 });
 

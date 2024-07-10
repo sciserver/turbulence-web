@@ -3,8 +3,8 @@ import router from 'next/router';
 import styled from 'styled-components';
 import { Tab, Tabs } from '@mui/material';
 
+import { AppContext } from 'context';
 import { TabOption } from './layout';
-import { AppContext } from '../../context';
 
 const StyledTabs = styled(Tabs)`
   margin-top: -10px;
@@ -32,10 +32,10 @@ export const TabMenu: FC = () => {
   const tabOptions: TabOption[] = [
     { name: 'Home', value: 'home' },
     { name: 'Database Access', value: 'database' },
-    { name: 'Documentation', value: 'documentation' },
-    { name: 'Resources', value: 'resources' },
-    { name: 'Visualizations', value: 'visualizations' },
-    { name: 'About', value: 'about' }
+    { name: 'Datasets', value: 'datasets' },
+    { name: 'Citing', value: 'citing' },
+    { name: 'Publications', value: 'publications' },
+    { name: 'Visualizations', value: 'visualizations' }
   ];
 
   return (

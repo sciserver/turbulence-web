@@ -1,7 +1,7 @@
 import { useState, FC } from 'react';
 
 // Context
-import { UserContext, AppContext } from '../../context';
+import { UserContext, AppContext } from 'context';
 
 interface Props {
   children: any

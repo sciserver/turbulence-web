@@ -1,10 +1,11 @@
 import { FC, useContext, useEffect } from 'react';
-import styled from 'styled-components';
-import { AppContext } from '../../../../context';
-import { Grid } from '@mui/material';
 import { useRouter } from 'next/router';
-import { CardLayout, CardStyled } from '../../../common/card';
-import { BreadCrumbParent, BreadCrumbsStyled } from '../../../common/breadcrumbs';
+import styled from 'styled-components';
+import { Grid } from '@mui/material';
+
+import { AppContext } from 'context';
+import { CardLayout, CardStyled } from 'components/common/card';
+import { BreadCrumbParent, BreadCrumbsStyled } from 'components/common/breadcrumbs';
 
 const Styled = styled.div`
     .card-list {
@@ -23,7 +24,7 @@ export const Windfarms: FC = () => {
 
   // ON MOUNT: UI config
   useEffect(() => {
-    setTabOption('documentation');
+    setTabOption(router.asPath.split('/')[1]);
   }, []);
 
   const datasetsList: CardLayout[] = [
@@ -40,8 +41,7 @@ export const Windfarms: FC = () => {
   ];
 
   const breadCrumbsParents: BreadCrumbParent[] = [
-    { name: 'Documentation', url: '/documentation' },
-    { name: 'Datasets', url: '/documentation/datasets' }
+    { name: 'Datasets', url: '/datasets' }
   ]
 
   return (

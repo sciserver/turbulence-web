@@ -1,11 +1,11 @@
 import { FC, useContext, useEffect } from 'react';
-import styled from 'styled-components';
-import { AppContext } from '../../../../context';
-import { Grid } from '@mui/material';
 import { useRouter } from 'next/router';
-import { hostURL } from '../../../../pages/_app';
-import { CardLayout, CardStyled } from '../../../common/card';
-import { BreadCrumbParent, BreadCrumbsStyled } from '../../../common/breadcrumbs';
+import styled from 'styled-components';
+import { Grid } from '@mui/material';
+
+import { AppContext } from 'context';
+import { hostURL } from 'pages/_app';
+import { CardLayout, CardStyled } from 'components/common/card';
 
 const Styled = styled.div`
     .card-list {
@@ -24,45 +24,40 @@ export const Datasets: FC = () => {
 
   // ON MOUNT: UI config
   useEffect(() => {
-    setTabOption('documentation');
+    setTabOption(router.asPath.split('/')[1]);
   }, []);
 
   const datasetsList: CardLayout[] = [
     {
       title: 'Homogeneous Turbulence',
       subtitle: 'Direct  Numerical Simulations',
-      onClick: () => { router.push('/documentation/datasets/homogeneousTurbulence') },
+      onClick: () => { router.push('/datasets/homogeneousTurbulence') },
       mediaSource: `${hostURL}datasets/homogeneousTurbulence.png`
 
     },
     {
       title: 'Wall Bounded Turbulence ',
       subtitle: 'Direct  Numerical Simulations',
-      onClick: () => { router.push('/documentation/datasets/wallBoundedTurbulence') },
+      onClick: () => { router.push('/datasets/wallBoundedTurbulence') },
       mediaSource: `${hostURL}datasets/wallBoundedTurbulence.png`
 
     },
     {
       title: 'Geophysical Turbulence ',
       subtitle: 'DNS and Large Eddy Simulations',
-      onClick: () => { router.push('/documentation/datasets/geophysicalTurbulence') },
+      onClick: () => { router.push('/datasets/geophysicalTurbulence') },
       mediaSource: `${hostURL}datasets/geophysicalTurbulence.png`
 
     },
     {
       title: 'Windfarms (coming soon)',
       subtitle: 'Large Eddy Simulations',
-      onClick: () => { router.push('/documentation/datasets/windfarms') },
+      onClick: () => { router.push('/datasets/windfarms') },
     }
   ];
 
-  const breadCrumbsParents: BreadCrumbParent[] = [
-    { name: 'Documentation', url: '/documentation' }
-  ]
-
   return (
     <Styled>
-      <BreadCrumbsStyled parents={breadCrumbsParents} componentName="Datasets" />
       <h2>Datasets</h2>
       <Grid container alignItems="stretch">
         {datasetsList.map(i =>

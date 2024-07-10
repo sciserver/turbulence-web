@@ -3,8 +3,8 @@ import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import { Grid } from '@mui/material';
 
-import { AppContext } from '../../../context';
-import { CardLayout, CardStyled } from '../../common/card';
+import { AppContext } from 'context';
+import { CardLayout, CardStyled } from 'components/common/card';
 
 
 const Styled = styled.div`
@@ -27,7 +27,7 @@ export const Documentation: FC = () => {
 
   // ON MOUNT: UI config
   useEffect(() => {
-    setTabOption('documentation');
+    setTabOption(router.asPath.split('/')[1]);
   }, []);
 
 
@@ -36,19 +36,19 @@ export const Documentation: FC = () => {
       title: 'Datasets',
       type: 'Guide',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat orci sit amet arcu accumsan, non sodales lacus porta. Pellentesque diam libero, luctus a ornare eu, interdum vel ex. Morbi sodales felis ante, cursus venenatis lectus vehicula sed. Donec lacus dui, tincidunt id eros at, lobortis rutrum ipsum. Cras at est vel leo interdum convallis. Curabitur rhoncus lacus magna, nec ultrices enim vestibulum sit amet. Aenean gravida mollis odio at aliquet. Quisque ultricies eros nec metus scelerisque, et congue leo feugiat. Maecenas interdum ligula quis vehicula convallis. Ut at interdum lacus. Donec at leo non nulla aliquet pellentesque et gravida orci. Fusce dapibus egestas orci eu tempus. Nam ut erat tempus, consequat ligula id, pellentesque nisl.',
-      onClick: () => { router.push('/documentation/datasets') }
+      onClick: () => { router.push('/datasets') }
     },
     {
       title: 'Publications',
       type: 'Guide',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat orci sit amet arcu accumsan, non sodales lacus porta. Pellentesque diam libero, luctus a ornare eu, interdum vel ex. Morbi sodales felis ante, cursus venenatis lectus vehicula sed. Donec lacus dui, tincidunt id eros at, lobortis rutrum ipsum. Cras at est vel leo interdum convallis. Curabitur rhoncus lacus magna, nec ultrices enim vestibulum sit amet. Aenean gravida mollis odio at aliquet. Quisque ultricies eros nec metus scelerisque, et congue leo feugiat. Maecenas interdum ligula quis vehicula convallis. Ut at interdum lacus. Donec at leo non nulla aliquet pellentesque et gravida orci. Fusce dapibus egestas orci eu tempus. Nam ut erat tempus, consequat ligula id, pellentesque nisl.',
-      onClick: () => { router.push('/documentation/publications') }
+      onClick: () => { router.push('/publications') }
     },
     {
       title: 'Citing',
       type: 'Guide',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat orci sit amet arcu accumsan, non sodales lacus porta. Pellentesque diam libero, luctus a ornare eu, interdum vel ex. Morbi sodales felis ante, cursus venenatis lectus vehicula sed. Donec lacus dui, tincidunt id eros at, lobortis rutrum ipsum. Cras at est vel leo interdum convallis. Curabitur rhoncus lacus magna, nec ultrices enim vestibulum sit amet. Aenean gravida mollis odio at aliquet. Quisque ultricies eros nec metus scelerisque, et congue leo feugiat. Maecenas interdum ligula quis vehicula convallis. Ut at interdum lacus. Donec at leo non nulla aliquet pellentesque et gravida orci. Fusce dapibus egestas orci eu tempus. Nam ut erat tempus, consequat ligula id, pellentesque nisl.',
-      onClick: () => { router.push('/documentation/citing') }
+      onClick: () => { router.push('/citing') }
     }
   ];
 

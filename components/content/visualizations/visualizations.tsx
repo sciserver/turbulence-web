@@ -3,8 +3,8 @@ import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import { Grid } from '@mui/material';
 
-import { AppContext } from '../../../context';
-import { CardLayout, CardStyled } from '../../common/card';
+import { AppContext } from 'context';
+import { CardLayout, CardStyled } from 'components/common/card';
 
 
 const Styled = styled.div`
@@ -27,7 +27,7 @@ export const Visualizations: FC = () => {
 
   // ON MOUNT: UI config
   useEffect(() => {
-    setTabOption('visualizations');
+    setTabOption(router.asPath.split('/')[1]);
   }, []);
 
 

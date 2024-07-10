@@ -1,4 +1,4 @@
-import { ACCESS_TOKEN_KEY } from '../utils/keys';
+import { ACCESS_TOKEN_KEY } from 'src/utils/keys';
 
 export class AuthService {
   static getToken(): string {

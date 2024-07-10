@@ -1,10 +1,11 @@
 import { FC } from 'react';
+import Link from 'next/link';
+import styled from 'styled-components';
+import { Alert } from '@mui/material';
+
+import { Footer } from './footer';
 import { Banner } from './banner';
 import { TabMenu } from './tabs';
-import styled from 'styled-components';
-import { Footer } from './footer';
-import { Alert } from '@mui/material';
-import Link from 'next/link';
 
 interface Props {
   children: any

@@ -3,8 +3,8 @@ import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import { Grid } from '@mui/material';
 
-import { AppContext } from '../../../context';
-import { CardLayout, CardStyled } from '../../common/card';
+import { AppContext } from 'context';
+import { CardLayout, CardStyled } from 'components/common/card';
 
 
 const Styled = styled.div`
@@ -25,7 +25,7 @@ export const DatabaseAccess: FC = () => {
 
   // ON MOUNT: UI config
   useEffect(() => {
-    setTabOption('database');
+    setTabOption(router.asPath.split('/')[1]);
   }, []);
 
 
@@ -34,7 +34,7 @@ export const DatabaseAccess: FC = () => {
       title: 'Web browser pointwise',
       type: 'External link',
       description: 'Directly obtain data using single-point virtual sensor method.',
-      onClick: () => { router.replace('https://turbulence.pha.jhu.edu/webquery/query.aspx') }
+      onClick: () => { router.push('/database/query') }
     },
     {
       title: 'Matlab Local',
@@ -62,7 +62,7 @@ export const DatabaseAccess: FC = () => {
       type: 'External link',
       description: 'Submit requests for gridded raw data. The service generates output in HDF5 format and an XDMF file for \
                      (e.g.) visualization in Paraview. Users must create a SciServer account to use this service.',
-      onClick: () => { router.replace('http://turbulence.idies.jhu.edu/cutout/') }
+      onClick: () => { router.push('/database/cutout') }
     }
   ];
 

@@ -1,7 +1,9 @@
 import { FC, useContext, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
-import { AppContext } from '../../../context';
 import Link from 'next/link';
+
+import { AppContext } from 'context';
 
 const Styled = styled.div`
   span {
@@ -11,11 +13,13 @@ const Styled = styled.div`
 
 export const Publications: FC = () => {
 
+  const router = useRouter();
+
   const { setTabOption } = useContext(AppContext);
 
   // ON MOUNT: UI config
   useEffect(() => {
-    setTabOption('documentation');
+    setTabOption(router.asPath.split('/')[1]);
   }, []);
 
   return (

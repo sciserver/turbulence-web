@@ -1,5 +1,5 @@
-import { Layout } from "../../components/common/layout";
-import { DatabaseAccess } from "../../components/content/databaseAccess";
+import { Layout } from "components/common/layout";
+import { DatabaseAccess } from "components/content/databaseAccess";
 
 // TODO: imp loading animation here
 export default function DatabaseAccessPage() {

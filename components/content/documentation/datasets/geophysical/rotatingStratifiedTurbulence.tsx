@@ -1,11 +1,13 @@
 import { FC, useContext, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
 import styled from 'styled-components';
 
-import { AppContext } from '../../../../../context';
-import { BreadCrumbParent, BreadCrumbsStyled } from '../../../../common/breadcrumbs';
-import rotatingImage from '../../../../../public/datasets/rotstrat4096.jpg'
+import { AppContext } from 'context';
+import { BreadCrumbParent, BreadCrumbsStyled } from 'components/common/breadcrumbs';
+
+import rotatingImage from 'public/datasets/rotstrat4096.jpg';
 
 const Styled = styled.div`
   .header {
@@ -34,17 +36,17 @@ const Styled = styled.div`
 
 export const RotatingStratifiedTurbulence: FC = () => {
 
+  const router = useRouter();
   const { setTabOption } = useContext(AppContext);
 
   // ON MOUNT: UI config
   useEffect(() => {
-    setTabOption('documentation');
+    setTabOption(router.asPath.split('/')[1]);
   }, []);
 
   const breadCrumbsParents: BreadCrumbParent[] = [
-    { name: 'Documentation', url: '/documentation' },
-    { name: 'Datasets', url: '/documentation/datasets' },
-    { name: 'Geophysical Turbulence', url: '/documentation/datasets/geophysicalTurbulence' }
+    { name: 'Datasets', url: '/datasets' },
+    { name: 'Geophysical Turbulence', url: '/datasets/geophysicalTurbulence' }
   ]
 
   return (

@@ -1,11 +1,13 @@
 import { FC, useContext, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
 import styled from 'styled-components';
 
-import { AppContext } from '../../../../../context';
-import { BreadCrumbParent, BreadCrumbsStyled } from '../../../../common/breadcrumbs';
-import mainImage from '../../../../../public/datasets/transition_bl.png'
+import { AppContext } from 'context';
+import { BreadCrumbParent, BreadCrumbsStyled } from 'components/common/breadcrumbs';
+
+import mainImage from 'public/datasets/transition_bl.png';
 
 const Styled = styled.div`
   .header {
@@ -34,17 +36,17 @@ const Styled = styled.div`
 
 export const TransitionalBL: FC = () => {
 
+  const router = useRouter();
   const { setTabOption } = useContext(AppContext);
 
   // ON MOUNT: UI config
   useEffect(() => {
-    setTabOption('documentation');
+    setTabOption(router.asPath.split('/')[1]);
   }, []);
 
   const breadCrumbsParents: BreadCrumbParent[] = [
-    { name: 'Documentation', url: '/documentation' },
-    { name: 'Datasets', url: '/documentation/datasets' },
-    { name: 'Wall Bounded Turbulence', url: '/documentation/datasets/wallBoundedTurbulence' }
+    { name: 'Datasets', url: '/datasets' },
+    { name: 'Wall Bounded Turbulence', url: '/datasets/wallBoundedTurbulence' }
   ]
 
   return (

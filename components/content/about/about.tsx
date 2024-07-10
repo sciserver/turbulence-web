@@ -1,10 +1,9 @@
 
-import { FC, useContext, useEffect } from 'react';
+import { FC, useContext } from 'react';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
-import { Grid } from '@mui/material';
 
-import { AppContext } from '../../../context';
+import { AppContext } from 'context';
 
 
 const Styled = styled.div`
@@ -24,11 +23,6 @@ export const About: FC = () => {
   const router = useRouter();
 
   const { setTabOption } = useContext(AppContext);
-
-  // ON MOUNT: UI config
-  useEffect(() => {
-    setTabOption('about');
-  }, []);
 
   return (
     <Styled>

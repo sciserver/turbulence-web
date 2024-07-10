@@ -1,10 +1,11 @@
 import { FC, useContext, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Image from 'next/image';
 import styled from 'styled-components';
 
-import mainImage from '../../../public/JHTDB2_snapshots.png';
-import { AppContext } from '../../../context';
-import { BreadCrumbParent, BreadCrumbsStyled } from '../../common/breadcrumbs';
+import mainImage from 'public/JHTDB2_snapshots.png';
+import { AppContext } from 'context';
+import { BreadCrumbParent, BreadCrumbsStyled } from 'components/common/breadcrumbs';
 
 const Styled = styled.div`
   .content {
@@ -14,11 +15,13 @@ const Styled = styled.div`
 
 export const WebServices: FC = () => {
 
+  const router = useRouter();
+
   const { setTabOption } = useContext(AppContext);
 
   // ON MOUNT: UI config
   useEffect(() => {
-    setTabOption('database');
+    setTabOption(router.asPath.split('/')[1]);
   }, []);
 
   const breadCrumbsParents: BreadCrumbParent[] = [

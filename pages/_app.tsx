@@ -3,9 +3,9 @@ import Head from 'next/head';
 import { createTheme, ThemeProvider } from '@mui/material';
 import { createGlobalStyle, ThemeProvider as StyledThemeProvider } from 'styled-components';
 
-import '../styles/globals.css';
-import themeJSON from '../theme.json';
-import { ContextWrapper } from '../components/wrappers/Context';
+import 'styles/globals.css';
+import themeJSON from 'theme.json';
+import { ContextWrapper } from 'components/wrappers/Context';
 
 export const hostURL = `${process.env.NEXT_PUBLIC_HOST_BASE_PATH}`;
 

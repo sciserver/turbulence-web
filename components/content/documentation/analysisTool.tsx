@@ -1,9 +1,10 @@
-import Image from 'next/image';
 import { FC, useContext, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import Image from 'next/image';
 import styled from 'styled-components';
 
-import mainImage from '../../../public/JHTDB2_snapshots.png';
-import { AppContext } from '../../../context';
+import { AppContext } from 'context';
+import mainImage from 'public/JHTDB2_snapshots.png';
 
 const Styled = styled.div`
   display: flex;
@@ -12,11 +13,12 @@ const Styled = styled.div`
 
 export const AnalysisTool: FC = () => {
 
+  const router = useRouter();
   const { setTabOption } = useContext(AppContext);
 
   // ON MOUNT: UI config
   useEffect(() => {
-    setTabOption('documentation');
+    setTabOption(router.asPath.split('/')[1]);
   }, []);
 
   return (
