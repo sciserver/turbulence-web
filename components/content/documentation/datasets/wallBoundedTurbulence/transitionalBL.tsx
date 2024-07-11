@@ -83,7 +83,7 @@ export const TransitionalBL: FC = () => {
             <br />
           </span>
           <span>
-            ✪  Pressure was treated using implicit Euler in the <i>δ</i>p-form. The pressure equation was Fourier transformed in the span, and the resulting Helmholtz equation was solved for every spanwise wavenumber using two-dimensional multi-grid.
+            ✪  Pressure was treated using implicit Euler in the δp-form. The pressure equation was Fourier transformed in the span, and the resulting Helmholtz equation was solved for every spanwise wavenumber using two-dimensional multi-grid.
             <br />
             <br />
           </span>
@@ -93,7 +93,7 @@ export const TransitionalBL: FC = () => {
             <br />
           </span>
           <span>
-            ✪  Since the grid is staggered, data at the wall are not stored in the database. However, JHTDB provides values in the region between the wall and the first grid point, <i>y∈[0, 0.0036]</i>, using 4th-order Lagrange polynomial inter- and extrapolation.
+            ✪  Since the grid is staggered, data at the wall are not stored in the database. However, JHTDB provides values in the region between the wall and the first grid point, y∈[0, 0.0036], using 4th-order Lagrange polynomial inter- and extrapolation.
             <br />
             <br />
           </span>
@@ -108,7 +108,7 @@ export const TransitionalBL: FC = () => {
             <br />
           </span>
         </div>
-      </div>
+      </div >
     </Styled >
   );
 };

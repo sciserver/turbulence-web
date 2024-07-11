@@ -64,7 +64,7 @@ export const StablyStratifiedBoundaryLayer: FC = () => {
           <br />
           <br />
           <span>
-            ✪  Large Eddy Simulation (LES) of stably stratified atmospheric boundary layer in a domain of size (400m, 400m, 400m), using <i>2048<sup>3</sup></i> mesh and mesh spacing of about 20cm in each direction.
+            ✪  Large Eddy Simulation (LES) of stably stratified atmospheric boundary layer in a domain of size (400m, 400m, 400m), using 2048<sup>3</sup> mesh and mesh spacing of about 20cm in each direction.
             <br />
             <br />
           </span>
@@ -79,32 +79,32 @@ export const StablyStratifiedBoundaryLayer: FC = () => {
             <br />
           </span>
           <span>
-            ✪  Flow is driven by a geostrophic wind of magnitude <i>U<sub>g</sub>=8 m/s</i>.
+            ✪  Flow is driven by a geostrophic wind of magnitude U<sub>g</sub>=8 m/s.
             <br />
             <br />
           </span>
           <span>
-            ✪  Bottom boundary is a rough surface with standard <strong>MOST</strong> parameterization and roughness length <i>z<sub>0</sub>=0.1m</i>.
+            ✪  Bottom boundary is a rough surface with standard MOST parameterization and roughness length z<sub>0</sub>=0.1m.
             <br />
             <br />
           </span>
           <span>
-            ✪  A constant cooling rate of <i>C<sub>r</sub> = 0.25 K/hr</i> is applied at the ground surface.
+            ✪  A constant cooling rate of C<sub>r</sub> = 0.25 K/hr is applied at the ground surface.
+            < br />
             <br />
-            <br />
-          </span>
+          </span >
           <span>
-            ✪  Resulting friction velocity is <i>u<sup>*</sup>=0.25 m/s</i> and boundary layer height is <i>h ~ 187 m</i>.
+            ✪  Resulting friction velocity is u<sup>*</sup>=0.25 m/s and boundary layer height is h ~187 m.
+            < br />
             <br />
-            <br />
-          </span>
+          </span >
           <span>
             ✪  Two data sets are available: time-resolved during a relatively short period of time consisting of 100 time-steps (high-frequency dataset name = “sable2048high”), and 20 statistically independent snapshots (low-frequency dataset name = “sable2048low”).
             <br />
             <br />
           </span>
-        </div>
-      </div>
+        </div >
+      </div >
     </Styled >
   );
 };

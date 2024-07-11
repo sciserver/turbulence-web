@@ -54,7 +54,7 @@ export const Channel5200: FC = () => {
       <BreadCrumbsStyled parents={breadCrumbsParents} componentName="Channel 5200" />
       <div className="page">
         <div className="header">
-          <h2>Channel Flow at <i>Re</i><sub>T</sub><i>=5,200</i></h2>
+          <h2>Channel Flow at Re<sub>T</sub>=5,200</h2>
           <Image src={mainImage} width={250} alt="Channel 5200 figure" />
         </div>
         <div className="content">
@@ -63,7 +63,7 @@ export const Channel5200: FC = () => {
           <br />
           <br />
           <span>
-            ✪  Direct numerical simulation (DNS) of channel flow in a domain of size <i>8π × 2 × 3π, using 10240 × 1536 × 7680</i> nodes.
+            ✪  Direct numerical simulation (DNS) of channel flow in a domain of size 8π × 2 × 3π, using 10240 × 1536 × 7680 nodes.
             <br />
             <br />
           </span>
@@ -83,20 +83,20 @@ export const Channel5200: FC = () => {
             <br />
           </span>
           <span>
-            ✪  The friction velocity is <i>u<sub>τ</sub>=0.0414872</i>.
+            ✪  The friction velocity is u<sub>τ</sub>=0.0414872.
+            < br />
             <br />
-            <br />
-          </span>
+          </span >
           <span>
-            ✪  The viscosity is <i>ν = 8 x 10<sup>-6</sup></i>.
+            ✪  The viscosity is ν = 8 x 10<sup>-6</sup>.
             <br />
             <br />
-          </span>
+          </span >
           <span>
-            ✪  The friction velocity Reynolds number is  <i>Re<sub>τ</sub> = 5185.897</i>.
+            ✪  The friction velocity Reynolds number is  Re<sub>τ</sub> = 5185.897.
             <br />
             <br />
-          </span>
+          </span >
           <span>
             ✪  The y-locations of the grid points in the vertical direction can be downloaded from <Link href="http://turbulence.pha.jhu.edu/docs/channel5200/channel5200-y.txt" target="_blank">this text file</Link>.
             The corresponding B-spline knot locations can be obtained from <Link href="http://turbulence.pha.jhu.edu/docs/channel5200/channel5200-y-knots.txt" target="_blank">this text file</Link>.
@@ -113,8 +113,8 @@ export const Channel5200: FC = () => {
             <br />
             <br />
           </span>
-        </div>
-      </div>
+        </div >
+      </div >
     </Styled >
   );
 };

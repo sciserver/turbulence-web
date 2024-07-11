@@ -83,7 +83,7 @@ export const BuoyancyTurbulence: FC = () => {
             <br />
           </span>
           <span>
-            ✪  Due to the change in specific volume during mixing, the divergence of velocity is not zero, but related to the density field. This leads to a variable coefficient Poisson equation for pressure, which is decomposed in two parts, for the gradient and curl components of <i>∇p/ρ</i>. These are solved using direct solvers to ensure mass conservation and baroclinic generation of vorticity to machine precision.
+            ✪  Due to the change in specific volume during mixing, the divergence of velocity is not zero, but related to the density field. This leads to a variable coefficient Poisson equation for pressure, which is decomposed in two parts, for the gradient and curl components of ∇p/ρ. These are solved using direct solvers to ensure mass conservation and baroclinic generation of vorticity to machine precision.
             <br />
             <br />
           </span>
@@ -108,20 +108,22 @@ export const BuoyancyTurbulence: FC = () => {
             <br />
           </span>
           <span>
-            ✪  Maximum turbulent Reynolds number: <i>Re<sub>τ</sub> ~ 17,765</i>.
+            ✪  Maximum turbulent Reynolds number: Re<sub>τ</sub> ~ 17,765.
             <br />
             <br />
           </span>
           <span>
-            ✪  Minimum turbulent Reynolds number during decay phase: <i>Re<sub>τ</sub> ~ 1,595</i>.
+            ✪  Minimum turbulent Reynolds number during decay phase: Re<sub>τ</sub> ~ 1,595.
             <br />
             <br />
           </span>
           <span>
-            ✪  A file with the time history of the Favre turbulent kinetic energy, <i>k<sup>˜</sup> = &lt;ρu<sub>i</sub>''u<sub>i</sub>''&gt; ⁄ 2&lt;ρ&gt;</i>, Reynolds stresses, R<sub>ii</sub> = &lt;ρu<sub>i</sub>''u<sub>i</sub>''&gt;  (no summation over i), vertical mass flux, <i>a<sub>v</sub> = &lt;ρ u<sub>1</sub>'&gt; ⁄ &lt;ρ&gt;</i>, turbulent Reynolds number,<i> Re<sub>τ</sub> = k<sup>˜</sup><sup>2</sup> ⁄ νε</i>, eddy turnover time, <i>τ = k<sup>˜</sup> ⁄ ε</i>, kinetic energy dissipation, <i>ε</i>, density variance and density-specific volume correlation can be found <Link href="http://turbulence.pha.jhu.edu/docs/hbdt/data1.txt">here</Link>. <br />(Note: Until July 22, 2015, the time-history file that was posted on this site included the total kinetic energy instead of the Favre turbulent kinetic energy. The file posted since July 22, 2015 lists the Favre turbulent kinetic energy)
+            ✪  A file with the time history of the Favre turbulent kinetic energy, k<sup>˜</sup> = &lt;ρu<sub>i</sub>''u<sub>i</sub>''&gt; ⁄ 2&lt;ρ&gt;, Reynolds stresses, R<sub>ii</sub> = &lt;ρu<sub>i</sub>''u<sub>i</sub>''&gt; (no summation over i), vertical mass flux, a<sub>v</sub> = &lt;ρu<sub>1</sub>'&gt; ⁄ &lt;ρ&gt;, turbulent Reynolds number, Re<sub>t</sub> = k<sup>˜</sup><sup>2</sup> ⁄ νε, eddy turnover time, τ = k<sup>˜</sup> ⁄ ε, kinetic energy dissipation, ε, density variance and density-specific volume correlation can be found <Link href="http://turbulence.pha.jhu.edu/docs/hbdt/data1.txt">here</Link>. <br />
+            < br />
+            (Note: Until July 22, 2015, the time-history file that was posted on this site included the total kinetic energy instead of the Favre turbulent kinetic energy. The file posted since July 22, 2015 lists the Favre turbulent kinetic energy)
+            < br />
             <br />
-            <br />
-          </span>
+          </span >
           <span>
             ✪  Files with tables of the power spectra of density, 3 velocity components, and mass flux can be downloaded at the following times:
             <Link href="http://turbulence.pha.jhu.edu/docs/hbdt/spectra1.txt" target="_blank"> 6.56</Link>,
@@ -145,8 +147,8 @@ export const BuoyancyTurbulence: FC = () => {
             <br />
             <br />
           </span>
-        </div>
-      </div>
+        </div >
+      </div >
     </Styled >
   );
 };

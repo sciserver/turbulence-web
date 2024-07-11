@@ -54,7 +54,7 @@ export const Isotropic8192Turbulence: FC = () => {
       <BreadCrumbsStyled parents={breadCrumbsParents} componentName="Isotropic 4096 Turbulence" />
       <div className="page">
         <div className="header">
-          <h2>Forced Isotropic Turbulence Dataset on <i>8192<sup>3</sup></i> Grid</h2>
+          <h2>Forced Isotropic Turbulence Dataset on 8192<sup>3</sup> Grid</h2>
           <Image src={rotatingImage} height={250} alt="Rotating Stratified Turbulence figure" />
         </div>
         <div className="content">
@@ -63,7 +63,7 @@ export const Isotropic8192Turbulence: FC = () => {
           <br />
           <br />
           <span>
-            ✪ Direct numerical simulation (DNS) using <i>8,192</i><sup>3</sup> nodes.
+            ✪ Direct numerical simulation (DNS) using 8,192<sup>3</sup> nodes.
             <br />
             <br />
           </span>
@@ -93,37 +93,37 @@ export const Isotropic8192Turbulence: FC = () => {
             <br />
           </span>
           <span>
-            ✪  Domain: <i>2π × 2π × 2π</i>
+            ✪  Domain: 2π × 2π × 2π
             <br />
             <br />
           </span>
           <span>
-            ✪  Grid: <i>8,192</i><sup>3</sup>
+            ✪  Grid: 8,192<sup>3</sup>
             <br />
             <br />
-          </span>
+          </span >
           <span>
             ✪  Number of snapshots available: 6
             <br />
             <br />
           </span>
           <span>
-            ✪  Taylor-scale Reynolds number <i>Re<sub>λ</sub>~ 1200-1300</i> for snapshots 0-4, and <i>Re<sub>λ</sub>~ 610</i> for snapshot 5
+            ✪  Taylor-scale Reynolds number Re<sub>λ</sub>~ 1200-1300 for snapshots 0-4, and Re<sub>λ</sub> ~610 for snapshot 5
+            < br />
             <br />
-            <br />
-          </span>
+          </span >
           <span>
             ✪  Viscosity, dissipation, RMS velocity, and Kolmogorov scale: see <Link href="http://turbulence.pha.jhu.edu/docs/README-isotropic8192.pdf">README-isotropic8192</Link>
             <br />
             <br />
           </span>
           <span>
-            ✪  <i>GetPosition</i> is not implemented for this dataset.
+            ✪  GetPosition is not implemented for this dataset.
+            < br />
             <br />
-            <br />
-          </span>
-        </div>
-      </div>
+          </span >
+        </div >
+      </div >
     </Styled >
   );
 };

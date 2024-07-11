@@ -89,7 +89,7 @@ export const Home: FC = () => {
           atmospheric turbulent boundary layer (20 Terabytes) and <strong>two wind farm LES:</strong> one in a conventionally neutral flow and another during a diurnal cycle (80 Terabytes).
         </p>
         <p>
-          Also available are individual snapshots (spatially but not temporally resolved data) of <i>4096</i><sup>3</sup> DNS of isotropic turbulence (1 snapshot), <i>8192</i><sup>3</sup> DNS of
+          Also available are individual snapshots (spatially but not temporally resolved data) of 4096<sup>3</sup> DNS of isotropic turbulence (1 snapshot), 8192<sup>3</sup> DNS of
           isotropic turbulence (6 snapshots at higher Reynolds number), rotating stratified turbulence (5 snapshots, 5 Terabytes), a high Reynolds number channel flow (11 snapshots, 20 Terabytes)
           and 20 snapshots of the LES of stably stratified atmospheric turbulent boundary layer.
         </p>
@@ -105,8 +105,8 @@ export const Home: FC = () => {
         <div className="points">
           <h3>548,379,625,412,859 points queried</h3>
         </div>
-      </div>
+      </div >
 
-    </Styled>
+    </Styled >
   );
 };

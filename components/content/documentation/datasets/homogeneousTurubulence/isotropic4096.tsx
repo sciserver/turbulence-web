@@ -54,7 +54,7 @@ export const Isotropic4096Turbulence: FC = () => {
       <BreadCrumbsStyled parents={breadCrumbsParents} componentName="Isotropic 4096 Turbulence" />
       <div className="page">
         <div className="header">
-          <h2>Forced Isotropic Turbulence Dataset on <i>4096<sup>3</sup></i> Grid</h2>
+          <h2>Forced Isotropic Turbulence Dataset on 4096<sup>3</sup> Grid</h2>
           <Image src={rotatingImage} height={250} alt="Rotating Stratified Turbulence figure" />
         </div>
         <div className="content">
@@ -63,7 +63,7 @@ export const Isotropic4096Turbulence: FC = () => {
           <br />
           <br />
           <span>
-            ✪ Direct numerical simulation (DNS) using <i>4,096</i><sup>3</sup> nodes.
+            ✪ Direct numerical simulation (DNS) using 4,096<sup>3</sup> nodes.
             <br />
             <br />
           </span>
@@ -93,52 +93,52 @@ export const Isotropic4096Turbulence: FC = () => {
             <br />
           </span>
           <span>
-            ✪  Domain: <i>2π × 2π × 2π</i>
+            ✪  Domain: 2π × 2π × 2π
             <br />
             <br />
           </span>
           <span>
-            ✪  Grid: <i>4,096</i><sup>3</sup>
+            ✪  Grid: 4,096<sup>3</sup>
             <br />
             <br />
-          </span>
+          </span >
           <span>
             ✪  Number of snapshots available: 1
             <br />
             <br />
           </span>
           <span>
-            ✪  Viscosity <i>ν = 1.732 × 10<sup>-4</sup></i>
+            ✪  Viscosity ν = 1.732 × 10<sup>-4</sup>
             <br />
             <br />
-          </span>
+          </span >
           <span>
-            ✪ RMS velocity <i>u' = (2k/3)<sup>1/2</sup> = 1.56853</i>
+            ✪ RMS velocity u' = (2k/3)<sup>1/2</sup> = 1.56853
             <br />
             <br />
-          </span>
+          </span >
           <span>
-            ✪  Reynolds number <i>Re<sub>λ</sub> = 610.57</i>
+            ✪  Reynolds number Re<sub>λ</sub> = 610.57
             <br />
             <br />
-          </span>
+          </span >
           <span>
-            ✪  Kolmogorov scale <i>η = 1.3844 × 10<sup>-3</sup></i>
+            ✪  Kolmogorov scale η = 1.3844 × 10<sup>-3</sup>
             <br />
             <br />
-          </span>
+          </span >
           <span>
-            ✪  <i>&lt;ε&gt;L<sub>1</sub> /u' <sup>3</sup> = 0.51</i>
+            ✪  &lt;ε&gt;L<sub>1</sub> /u' <sup>3</sup> = 0.51
             <br />
             <br />
-          </span>
+          </span >
           <span>
-            ✪  <i>GetPosition</i> is not implemented for this dataset.
+            ✪  GetPosition is not implemented for this dataset.
+            < br />
             <br />
-            <br />
-          </span>
-        </div>
-      </div>
+          </span >
+        </div >
+      </div >
     </Styled >
   );
 };

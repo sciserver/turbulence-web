@@ -63,7 +63,7 @@ export const ChannelFlow: FC = () => {
           <br />
           <br />
           <span>
-            ✪  Direct numerical simulation (DNS) of channel flow in a domain of size <i>8π x 2 x 3π</i>, using <i>2048 x 512 x 1536</i> nodes.
+            ✪  Direct numerical simulation (DNS) of channel flow in a domain of size 8π x 2 x 3π, using 2048 x 512 x 1536 nodes.
             <br />
             <br />
           </span>
@@ -73,7 +73,7 @@ export const ChannelFlow: FC = () => {
             <br />
           </span>
           <span>
-            ✪  Simulation is run and equilibrated using prescribed bulk velocity=1, then switched to imposed pressure gradient (<i>dP/dx = 0.0025</i>) and further equilibrated.
+            ✪  Simulation is run and equilibrated using prescribed bulk velocity=1, then switched to imposed pressure gradient (dP/dx = 0.0025) and further equilibrated.
             <br />
             <br />
           </span>
@@ -84,20 +84,20 @@ export const ChannelFlow: FC = () => {
             <br />
           </span>
           <span>
-            ✪  The friction velocity is <i>u<sub>τ</sub>=0.0499</i>.
+            ✪  The friction velocity is u<sub>τ</sub>=0.0499.
+            < br />
             <br />
-            <br />
-          </span>
+          </span >
           <span>
-            ✪  The viscosity is <i>ν = 5 x 10<sup>-5</sup></i>.
+            ✪  The viscosity is ν = 5 x 10<sup>-5</sup>.
             <br />
             <br />
-          </span>
+          </span >
           <span>
-            ✪  The friction velocity Reynolds number is  <i>Re<sub>τ</sub> ~ 1000</i>.
+            ✪  The friction velocity Reynolds number is  Re<sub>τ</sub> ~ 1000.
             <br />
             <br />
-          </span>
+          </span >
           <span>
             ✪  The y-locations of the grid points in the vertical direction can be downloaded from <Link href="http://turbulence.pha.jhu.edu/docs/channel/y.txt" target="_blank">this text file</Link>.
             The corresponding B-spline knot locations can be obtained from <Link href="http://turbulence.pha.jhu.edu/docs/channel/y-knots.txt" target="_blank">this text file</Link>.
@@ -115,7 +115,7 @@ export const ChannelFlow: FC = () => {
             <br />
           </span>
           <span>
-            ✪  Files with tables of the streamwise <i>(k<sub>x</sub>)</i> spectra of <i>u, v, w, p</i> at various heights can be downloaded for the following y+ values:
+            ✪  Files with tables of the streamwise (k<sub>x</sub>) spectra of u, v, w, p at various heights can be downloaded for the following y+ values:
             <Link href="http://turbulence.pha.jhu.edu/docs/channel/spectra-kx-yplus-10.11.txt" target="_blank"> 10.11</Link>,
             <Link href="http://turbulence.pha.jhu.edu/docs/channel/spectra-kx-yplus-29.89.txt" target="_blank"> 29.89</Link>,
             <Link href="http://turbulence.pha.jhu.edu/docs/channel/spectra-kx-yplus-99.75.txt" target="_blank"> 99.75</Link>,
@@ -123,9 +123,9 @@ export const ChannelFlow: FC = () => {
             <Link href="http://turbulence.pha.jhu.edu/docs/channel/spectra-kx-yplus-999.7.txt" target="_blank"> 999.7</Link>.
             <br />
             <br />
-          </span>
+          </span >
           <span>
-            ✪  Files with tables of the spanwise <i>(k<sub>z</sub>)</i> spectra of <i>u, v, w, p</i> at various heights can be downloaded for the following y+ values:
+            ✪  Files with tables of the spanwise (k<sub>z</sub>) spectra of u, v, w, p at various heights can be downloaded for the following y+ values:
             <Link href="http://turbulence.pha.jhu.edu/docs/channel/spectra-kx-yplus-10.11.txt" target="_blank"> 10.11</Link>,
             <Link href="http://turbulence.pha.jhu.edu/docs/channel/spectra-kx-yplus-29.89.txt" target="_blank"> 29.89</Link>,
             <Link href="http://turbulence.pha.jhu.edu/docs/channel/spectra-kx-yplus-99.75.txt" target="_blank"> 99.75</Link>,
@@ -133,9 +133,9 @@ export const ChannelFlow: FC = () => {
             <Link href="http://turbulence.pha.jhu.edu/docs/channel/spectra-kx-yplus-999.7.txt" target="_blank"> 999.7</Link>.
             <br />
             <br />
-          </span>
-        </div>
-      </div>
+          </span >
+        </div >
+      </div >
     </Styled >
   );
 };

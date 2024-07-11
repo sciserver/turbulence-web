@@ -30,26 +30,26 @@ export const WallBoundedTurbulence: FC = () => {
 
   const datasetsList: CardLayout[] = [
     {
-      title: 'Channel Flow at <i>Re</i><sub>τ</sub><i>=1000</i>',
+      title: 'Channel Flow at Re<sub>τ</sub>=1000',
       subtitle: 'channel',
-      description: 'Direct numerical simulation (DNS) of channel flow turbulence in a domain of size <i>8π × 2 × 3π</i>, \
-                    using <i>2048 × 512 × 1536</i> nodes. The full time evolution is available, over a flow-through time \
-                    across across the <i>8π</i> channel',
+      description: 'Direct numerical simulation (DNS) of channel flow turbulence in a domain of size 8π × 2 × 3π, \
+                    using 2048 × 512 × 1536 nodes. The full time evolution is available, over a flow-through time \
+                    across across the 8π channel',
       onClick: () => { router.push('/datasets/wallBoundedTurbulence/channelFlow') },
       mediaSource: `${hostURL}datasets/channel-large-banner.jpeg`
     },
     {
-      title: 'Channel Flow at <i>Re</i><sub>τ</sub><i>=5,200</i>',
+      title: 'Channel Flow at Re<sub>τ</sub>=5,200',
       subtitle: 'channel5200',
-      description: 'DNS of channel flow turbulence in a domain of size <i>8π × 2 × 3π</i>, using <i>10240 × 1536 × 7680</i> \
+      description: 'DNS of channel flow turbulence in a domain of size 8π × 2 × 3π, using 10240 × 1536 × 7680 \
                     nodes. A total of 11 snapshots are available.',
       onClick: () => { router.push('/datasets/wallBoundedTurbulence/channel5200') },
       mediaSource: `${hostURL}datasets/channel5200-banner.png`
     },
     {
-      title: 'Transitional Boundary Layer from <i>Re</i><sub>θ</sub><i>=105.5</i>  to 1502.0',
+      title: 'Transitional Boundary Layer from Re<sub>θ</sub>=105.5  to 1502.0',
       subtitle: 'transition_bl',
-      description: 'DNS of a transitional boundary layer using <i>3320 × 224 × 2048</i> grid points. \The full time evolution \
+      description: 'DNS of a transitional boundary layer using 3320 × 224 × 2048 grid points. \The full time evolution \
                     is available, over about 1 flow-through time across the length of simulation domain.',
       onClick: () => { router.push('/datasets/wallBoundedTurbulence/transitionalBL') },
       mediaSource: `${hostURL}datasets/transition_bl.png`

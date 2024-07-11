@@ -63,7 +63,7 @@ export const IsotropicTurbulence: FC = () => {
           <br />
           <br />
           <span>
-            ✪  Direct numerical simulation (DNS) using <i>1,024</i><sup>3</sup> nodes.
+            ✪  Direct numerical simulation (DNS) using 1,024<sup>3</sup> nodes.
             <br />
             <br />
           </span>
@@ -73,7 +73,7 @@ export const IsotropicTurbulence: FC = () => {
             <br />
           </span>
           <span>
-            ✪  Energy is injected by keeping constant the total energy in shells such that <i>|k|</i> is less or equal to 2.
+            ✪  Energy is injected by keeping constant the total energy in shells such that |k| is less or equal to 2.
             <br />
             <br />
           </span>
@@ -83,7 +83,7 @@ export const IsotropicTurbulence: FC = () => {
             <br />
           </span>
           <span>
-            ✪ The Taylor-scale Reynolds number fluctuates around <i>R<sub>λ</sub>~ 433</i>.
+            ✪ The Taylor-scale Reynolds number fluctuates around R<sub>λ</sub>~ 433.
             <br />
             <br />
           </span>
@@ -107,8 +107,8 @@ export const IsotropicTurbulence: FC = () => {
             <br />
             <br />
           </span>
-        </div>
-      </div>
+        </div >
+      </div >
     </Styled >
   );
 };

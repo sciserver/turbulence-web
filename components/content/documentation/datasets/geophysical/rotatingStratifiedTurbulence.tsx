@@ -54,7 +54,7 @@ export const RotatingStratifiedTurbulence: FC = () => {
       <BreadCrumbsStyled parents={breadCrumbsParents} componentName="Rotating Stratified Turbulence" />
       <div className="page">
         <div className="header">
-          <h2>Rotating Stratified Turbulence on <i>4,094</i><sup>3</sup> mesh</h2>
+          <h2>Rotating Stratified Turbulence on 4,094<sup>3</sup> mesh</h2>
           <Image src={rotatingImage} height={250} alt="Rotating Stratified Turbulence figure" />
         </div>
         <div className="content">
@@ -63,7 +63,7 @@ export const RotatingStratifiedTurbulence: FC = () => {
           <br />
           <br />
           <span>
-            ✪  Direct numerical simulation (DNS) of rotating and stratified turbulence using <i>4,096</i><sup>3</sup> nodes, on a periodic grid using a pseudo-spectral parallel code, GHOST.
+            ✪  Direct numerical simulation (DNS) of rotating and stratified turbulence using 4,096<sup>3</sup> nodes, on a periodic grid using a pseudo-spectral parallel code, GHOST.
             <br />
             <br />
           </span>
@@ -93,7 +93,7 @@ export const RotatingStratifiedTurbulence: FC = () => {
             <br />
           </span>
           <span>
-            ✪  Grid: <i>4,096</i><sup>3</sup>
+            ✪  Grid: 4,096<sup>3</sup>
             <br />
             <br />
           </span>
@@ -103,82 +103,82 @@ export const RotatingStratifiedTurbulence: FC = () => {
             <br />
           </span>
           <span>
-            ✪  Viscosity <i>ν = 4 × 10<sup>-5</sup></i>
+            ✪  Viscosity ν = 4 × 10<sup>-5</sup>
             <br />
             <br />
-          </span>
+          </span >
           <span>
-            ✪  Prandlt number <i> Pr = ν/κ = 1</i>
+            ✪  Prandlt number  Pr = ν/κ = 1
             <br />
             <br />
-          </span>
+          </span >
           <span>
-            ✪  Brunt-Väisälä frequency <i>N = 13.2</i>
+            ✪  Brunt-Väisälä frequency N = 13.2
             <br />
             <br />
-          </span>
+          </span >
           <span>
-            ✪  Inertial wave frequency <i>f = 2.67</i>
+            ✪  Inertial wave frequency f = 2.67
             <br />
             <br />
-          </span>
+          </span >
           <span>
-            ✪ RMS velocity <i>U<sub>0</sub> = 0.83</i>
+            ✪ RMS velocity U<sub>0</sub> = 0.83
             <br />
             <br />
-          </span>
+          </span >
           <span>
-            ✪  Scale of energy spectrum peak <i>L<sub>0</sub> = 2π/k<sub>0</sub> = 2.5</i>
+            ✪  Scale of energy spectrum peak L<sub>0</sub> = 2π/k<sub>0</sub> = 2.5
             <br />
             <br />
-          </span>
+          </span >
           <span>
-            ✪  Integral length scale <i>L<sub>int</sub> = 2π ∫ EV(k)dk / ∫ kEV(k)dk = 2.6</i>
+            ✪  Integral length scale L<sub>int</sub> = 2π ∫ EV(k)dk / ∫ kEV(k)dk = 2.6
             <br />
             <br />
-          </span>
+          </span >
           <span>
-            ✪  Froude number <i>Fr = U<sub>0</sub>/L<sub>0</sub>N = 0.0242</i>
+            ✪  Froude number Fr = U<sub>0</sub>/L<sub>0</sub>N = 0.0242
             <br />
             <br />
-          </span>
+          </span >
           <span>
-            ✪  Rossby number <i>Ro = U<sub>0</sub>/L<sub>0</sub>f = 0.12</i>
+            ✪  Rossby number Ro = U<sub>0</sub>/L<sub>0</sub>f = 0.12
             <br />
             <br />
-          </span>
+          </span >
           <span>
-            ✪  Reynolds number <i>Re = U<sub>0</sub>L<sub>0</sub>/ν = 5.4 x 104</i>
+            ✪  Reynolds number Re = U<sub>0</sub>L<sub>0</sub>/ν = 5.4 x 104
             <br />
             <br />
-          </span>
+          </span >
           <span>
-            ✪  Kinetic Energy Dissipation <i>ε<sub>V</sub> = 0.0123</i>
+            ✪  Kinetic Energy Dissipation ε<sub>V</sub> = 0.0123
             <br />
             <br />
-          </span>
+          </span >
           <span>
-            ✪  Potential Energy Dissipation <i>ε<sub>P</sub> = 0.0077</i>
+            ✪  Potential Energy Dissipation ε<sub>P</sub> = 0.0077
             <br />
             <br />
-          </span>
+          </span >
           <span>
-            ✪  Kolmogorov scale <i>η = 1.51515 × 10<sup>-3</sup></i>
+            ✪  Kolmogorov scale η = 1.51515 × 10<sup>-3</sup>
             <br />
             <br />
-          </span>
+          </span >
           <span>
-            ✪  <i>k<sub>max</sub>η = 3.1</i>
+            ✪  k<sub>max</sub>η = 3.1
             <br />
             <br />
-          </span>
+          </span >
           <span>
-            ✪  <i>GetPosition</i> is not implemented for this dataset.
+            ✪  GetPosition is not implemented for this dataset.
+            < br />
             <br />
-            <br />
-          </span>
-        </div>
-      </div>
+          </span >
+        </div >
+      </div >
     </Styled >
   );
 };

@@ -30,7 +30,7 @@ export const GeophysicalTurbulence: FC = () => {
 
   const datasetsList: CardLayout[] = [
     {
-      title: 'Rotating Stratified Turbulence on <i>4,094</i><sup>3</sup> mesh',
+      title: 'Rotating Stratified Turbulence on 4,094<sup>3</sup> mesh',
       subtitle: 'rotstrat4096',
       description: 'Direct numerical simulation (DNS) of rotating stratified homogeneous turbulence, for which total of 5 snapshots are available.',
       onClick: () => { router.push('/datasets/geophysicalTurbulence/rst') },
@@ -39,7 +39,7 @@ export const GeophysicalTurbulence: FC = () => {
     {
       title: 'Stably stratified atmospheric boundary layer',
       subtitle: '(COMING SOON)',
-      description: 'Large Eddy Simulation (LES) of stably stratified ABL flow on on <i>2,048</i><sup>3</sup> mesh. A time history of 100 time-steps \
+      description: 'Large Eddy Simulation (LES) of stably stratified ABL flow on on 2,048<sup>3</sup> mesh. A time history of 100 time-steps \
                     (“sabl2048high”) and 20 statistically independent snapshots (“sable2048low”) are available.',
       onClick: () => { router.push('/datasets/geophysicalTurbulence/sabl') },
       mediaSource: `${hostURL}datasets/boundaryLayer.png`
