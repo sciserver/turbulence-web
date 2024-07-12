@@ -1,4 +1,4 @@
-import { FC, useContext, useEffect } from 'react';
+import { FC, useContext, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import Link from 'next/link';
@@ -9,17 +9,28 @@ const Styled = styled.div`
   span {
     padding: 50px 0px;
   }
+
+  iframe {
+    border: none;
+    width: 90%;
+  }
 `;
 
 export const Publications: FC = () => {
 
+  //Config
   const router = useRouter();
 
+  //Context
   const { setTabOption } = useContext(AppContext);
+
+  //App State
+  const [iframeHeight, setIframeHeight] = useState<number>(0);
 
   // ON MOUNT: UI config
   useEffect(() => {
     setTabOption(router.asPath.split('/')[1]);
+    setIframeHeight(window.innerHeight);
   }, []);
 
   return (
@@ -66,6 +77,7 @@ export const Publications: FC = () => {
         <br />
       </span>
       <h2>Sample publications of Turbulence Database usage</h2>
+      <iframe height={iframeHeight} src="https://bibbase.org/service/mendeley/75799766-8e2d-3c98-81f9-e3efa41233d0/group/c9329632-2a50-3043-b803-cadc8dbdfc3f"></iframe>
     </Styled>
   );
 };
