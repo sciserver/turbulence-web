@@ -1,11 +1,21 @@
+/* eslint-disable eslint-comments/disable-enable-pair */
+/* eslint-disable @next/next/no-page-custom-font */
+/* eslint-disable @next/next/google-font-display */
 import type { AppProps } from 'next/app';
-import Head from 'next/head';
+
+// Graphql
+import { ApolloProvider } from '@apollo/client';
+import client from 'apollo-client';
+
+// Styles
 import { createTheme, ThemeProvider } from '@mui/material';
 import { createGlobalStyle, ThemeProvider as StyledThemeProvider } from 'styled-components';
+import themeJSON from '../theme.json';
+import '../styles/globals.css';
 
-import 'styles/globals.css';
-import themeJSON from 'theme.json';
+// Wrappers
 import { ContextWrapper } from 'components/wrappers/Context';
+import Head from 'next/head';
 
 export const hostURL = `${process.env.NEXT_PUBLIC_HOST_BASE_PATH}`;
 
@@ -71,13 +81,15 @@ export default function App({ Component, pageProps }: AppProps) {
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Slabo+27px&display=swap" rel="stylesheet" />
       </Head>
       <GlobalStyle />
-      <ContextWrapper>
-        <ThemeProvider theme={theme}>
-          <StyledThemeProvider theme={theme}>
-            <Component {...pageProps} />
-          </StyledThemeProvider>
-        </ThemeProvider>
-      </ContextWrapper>
+      <ApolloProvider client={client}>
+        <ContextWrapper>
+          <ThemeProvider theme={theme}>
+            <StyledThemeProvider theme={theme}>
+              <Component {...pageProps} />
+            </StyledThemeProvider>
+          </ThemeProvider>
+        </ContextWrapper>
+      </ApolloProvider>
     </>
   );
 }

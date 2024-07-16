@@ -1,10 +1,12 @@
-import { FC, useContext, useEffect } from 'react';
+import { FC, useContext, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useQuery } from '@apollo/client';
 import styled from 'styled-components';
 
 import { AppContext } from 'context';
+import { POINTS_QUERIED } from 'src/graphql/points';
 
 import mainImage from 'public/JHTDB2_snapshots.png';
 
@@ -40,12 +42,36 @@ const Styled = styled.div`
     display: flex;
     gap: 30px;
   }
+
+  .loading {
+    font-weight: bold;
+    display:inline-block;
+    font-family: monospace;
+    font-size: 30px;
+    clip-path: inset(0 3ch 0 0);
+    animation: l 1s steps(4) infinite;
+  }
+  
+  @keyframes l {
+    to {
+      clip-path: inset(0 -1ch 0 0)
+    }
+  }
 `;
 
 export const Home: FC = () => {
 
   const router = useRouter();
   const { setTabOption } = useContext(AppContext);
+
+  const { data, loading } = useQuery(POINTS_QUERIED);
+
+  const points = useMemo<number>(() => {
+    if (data) {
+      return data.getPointsQueried;
+    }
+  }, [data]);
+
 
   // ON MOUNT: UI config
   useEffect(() => {
@@ -98,9 +124,13 @@ export const Home: FC = () => {
           datasets. Also, data are being migrated to <strong>Ceph-FS</strong> storage from the original SQL-database and FileDB storage modalities.
           New more modular Python and Matlab <Link href="/datasets/">codes</Link> use the REST interface instead of the legacy SOAP interface.
         </p>
-        <div className="points">
-          <h3> ~ 515 x 10<sup>12</sup> points queried</h3>
-        </div>
+        {loading ?
+          <div className="loading">Loading...</div>
+          :
+          <div className="points">
+            <h3> {points.toLocaleString()} points queried</h3>
+          </div>
+        }
       </div >
 
     </Styled >
