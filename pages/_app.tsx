@@ -40,7 +40,7 @@ export default function App({ Component, pageProps }: AppProps) {
     font-optical-sizing: auto;
   }
   
-  p {
+  p, blockquote {
     font-family: "Noto Sans", sans-serif;
     font-style: normal;
     font-size: 18px;
