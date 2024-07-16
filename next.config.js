@@ -38,6 +38,11 @@ module.exports = withTM({
         source: '/database/cutout',
         destination: 'http://turbulence.idies.jhu.edu/cutout/',
         permanent: true
+      },
+      {
+        source: '/contact',
+        destination: 'mailto:turbulence@lists.johnshopkins.edu',
+        permanent: true
       }
     ]
   }

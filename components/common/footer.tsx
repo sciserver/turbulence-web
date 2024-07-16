@@ -36,6 +36,7 @@ const Styled = styled.footer<{ footerwidth: number }>`
     @media (width >= 800px)  {
       display: flex;
       align-items: center;
+      justify-content: space-around;
       gap: 100px;
     }
     padding: 30px 150px;
@@ -43,14 +44,9 @@ const Styled = styled.footer<{ footerwidth: number }>`
     
     background: linear-gradient(90deg, rgb(206,214, 242) 1%, rgb(50, 72, 150, 0.8) 60%,rgb(186, 57, 64,0.6) 100%);
     
-    .contact {
-      @media (width < 800px)  {
-        margin-bottom: 7%;
-      }
-      @media (width >= 1000px)  {
-        min-width: 300px;
-      }
-    }
+    h2:hover {
+      cursor: pointer;
+    } 
   }
 `;
 
@@ -72,19 +68,9 @@ export const Footer = () => {
 
   return <Styled {...{ footerwidth }}>
     <div className="info">
-      <div className="contact">
-        <span className="caption">
-          Do you have any questions or comments? <Link href="mailto:turbulence@lists.johnshopkins.edu">Contact us</Link>
-        </span>
-      </div>
-      <span className="caption">
-        <b>Disclaimer:</b> While many efforts have been made to ensure that these data are accurate and reliable within the
-        limits of the current state of the art, neither JHU nor any other party involved in creating, producing or
-        delivering the website shall be liable for any damages arising out of users' access to, or use of, the website
-        or web services. Users use the website and web services at their own risk. JHU does not warrant that the functional
-        aspects of the website will be uninterrupted or error free, and may make changes to the site without notice.
-        Last updated: 9/24/2020 12:01:37 PM
-      </span>
+      <h2 onClick={() => { router.push('/contact') }}>Contact</h2>
+      <h2 onClick={() => { router.push('/about') }}>About</h2>
+      <h2 onClick={() => { router.push('/legal') }}>Legal</h2>
     </div>
     <div className="sponsors">
       <h4>JHTDB operates with support from:</h4>

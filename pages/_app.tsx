@@ -40,14 +40,21 @@ export default function App({ Component, pageProps }: AppProps) {
   }
 
   main {
-    margin: 10px 5% 30px 20%;
+    margin: 3% 5% 10% 20%;
   }
 
-  h2, h3, h4, h5 {
+  h1, h2, h3, h4, h5 {
     font-family: "Roboto Slab", serif;
-      font-weight: 400;
-      font-style: normal;
+    font-style: normal;
     font-optical-sizing: auto;
+    }
+    
+  h1, h2, h3 {
+      font-weight: 600;    
+  }
+
+  h4, h5 {
+      font-weight: 400;    
   }
   
   p, blockquote {
