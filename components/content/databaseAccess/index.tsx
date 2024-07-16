@@ -1,4 +1,5 @@
 import { FC, useContext, useEffect } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import { Grid } from '@mui/material';
@@ -13,10 +14,29 @@ const Styled = styled.div`
     flex-wrap: wrap;
 
     margin-top: 20px;
+
+  }
+  
+  .token-description {
+    width: 90%;
+  }
+
+  iframe {
+    border: none;
+    width: auto;
+    width: 450px; 
+    height: 145px; 
+
+    .code {
+      width: 450px; 
+      height: 145px; 
+      border 0; 
+      transform: scale(1); 
+      overflow: hidden;
+      }
   }
 
 `;
-
 export const DatabaseAccess: FC = () => {
 
   const router = useRouter();
@@ -68,7 +88,19 @@ export const DatabaseAccess: FC = () => {
 
   return (
     <Styled>
-      <h1>Database Access</h1>
+      <h2>Authorization Token for the Johns Hopkins Turbulence Databases</h2>
+      <p className="token-description">
+        For requests of less than 4096 points, the following testing identifier can be used.
+        <iframe
+          src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=a11y-dark&wt=bw&l=text&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=24px&ph=22px&ln=false&fl=1&fm=IBM+Plex+Mono&fs=15.5px&lh=133%25&si=false&es=2x&wm=false&code=edu.jhu.pha.turbulence.testing-201406"
+          className="code"
+          sandbox="allow-scripts allow-same-origin">
+        </iframe>
+        <br />
+        For larger queries, users need to have an  <strong><i>authorization token</i></strong>. Please send an e-mail to <Link href="mailto:turbulence@lists.johnshopkins.edu">turbulence@lists.johnshopkins.edu</Link> including your name, email address, and institutional affiliation and department, together with a short description of your intended use of the database.
+      </p>
+      <br />
+      <h2>Database Access</h2>
       <br />
       <Grid container alignItems="stretch">
         {dbAccesssDirectory.map(i =>
