@@ -5,6 +5,7 @@ import { Grid } from '@mui/material';
 
 import { AppContext } from 'context';
 import { CardLayout, CardStyled } from 'components/common/card';
+import { hostURL } from 'pages/_app';
 
 
 const Styled = styled.div`
@@ -34,27 +35,28 @@ export const Visualizations: FC = () => {
   const visualizationsDirectory: CardLayout[] = [
     {
       title: 'Vorticies within vorticies',
-      type: 'Guide',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat orci sit amet arcu accumsan, non sodales lacus porta. Pellentesque diam libero, luctus a ornare eu, interdum vel ex. Morbi sodales felis ante, cursus venenatis lectus vehicula sed. Donec lacus dui, tincidunt id eros at, lobortis rutrum ipsum. Cras at est vel leo interdum convallis. Curabitur rhoncus lacus magna, nec ultrices enim vestibulum sit amet. Aenean gravida mollis odio at aliquet. Quisque ultricies eros nec metus scelerisque, et congue leo feugiat. Maecenas interdum ligula quis vehicula convallis. Ut at interdum lacus. Donec at leo non nulla aliquet pellentesque et gravida orci. Fusce dapibus egestas orci eu tempus. Nam ut erat tempus, consequat ligula id, pellentesque nisl.',
-      onClick: () => { router.push('/database/webServices') }
+      description: 'Visualization of time evolution of small scale vortices being stretched and twisted by \
+       larger-scale vortices.',
+      onClick: () => { router.push('/visualizations/vortex') },
+      mediaSource: `${hostURL}visualizations/vortex1.png`
     },
     {
       title: 'Swept through turbulence',
-      type: 'Guide',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat orci sit amet arcu accumsan, non sodales lacus porta. Pellentesque diam libero, luctus a ornare eu, interdum vel ex. Morbi sodales felis ante, cursus venenatis lectus vehicula sed. Donec lacus dui, tincidunt id eros at, lobortis rutrum ipsum. Cras at est vel leo interdum convallis. Curabitur rhoncus lacus magna, nec ultrices enim vestibulum sit amet. Aenean gravida mollis odio at aliquet. Quisque ultricies eros nec metus scelerisque, et congue leo feugiat. Maecenas interdum ligula quis vehicula convallis. Ut at interdum lacus. Donec at leo non nulla aliquet pellentesque et gravida orci. Fusce dapibus egestas orci eu tempus. Nam ut erat tempus, consequat ligula id, pellentesque nisl.',
-      onClick: () => { router.push('/database/webServices') }
+      description: 'Velocity and vorticity contours in the 1024<sup>3</sup> isotropic turbulence DNS dataset on a 2D plane being swept across the domain at a fixed time.',
+      onClick: () => { router.push('/visualizations/sweptThrough') },
+      mediaSource: `${hostURL}visualizations/isotropic2.png`
     },
     {
       title: 'Electric field in MHD turbulence',
-      type: 'Guide',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat orci sit amet arcu accumsan, non sodales lacus porta. Pellentesque diam libero, luctus a ornare eu, interdum vel ex. Morbi sodales felis ante, cursus venenatis lectus vehicula sed. Donec lacus dui, tincidunt id eros at, lobortis rutrum ipsum. Cras at est vel leo interdum convallis. Curabitur rhoncus lacus magna, nec ultrices enim vestibulum sit amet. Aenean gravida mollis odio at aliquet. Quisque ultricies eros nec metus scelerisque, et congue leo feugiat. Maecenas interdum ligula quis vehicula convallis. Ut at interdum lacus. Donec at leo non nulla aliquet pellentesque et gravida orci. Fusce dapibus egestas orci eu tempus. Nam ut erat tempus, consequat ligula id, pellentesque nisl.',
-      onClick: () => { router.push('/database/webServices') }
+      description: 'Ohmic electric field in 3D MHD turbulence.',
+      onClick: () => { router.push('/visualizations/mhd3') },
+      mediaSource: `${hostURL}visualizations/mhd3.png`
     },
     {
       title: 'Wrinkling of smoke sheets in turbulence',
-      type: 'Guide',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat orci sit amet arcu accumsan, non sodales lacus porta. Pellentesque diam libero, luctus a ornare eu, interdum vel ex. Morbi sodales felis ante, cursus venenatis lectus vehicula sed. Donec lacus dui, tincidunt id eros at, lobortis rutrum ipsum. Cras at est vel leo interdum convallis. Curabitur rhoncus lacus magna, nec ultrices enim vestibulum sit amet. Aenean gravida mollis odio at aliquet. Quisque ultricies eros nec metus scelerisque, et congue leo feugiat. Maecenas interdum ligula quis vehicula convallis. Ut at interdum lacus. Donec at leo non nulla aliquet pellentesque et gravida orci. Fusce dapibus egestas orci eu tempus. Nam ut erat tempus, consequat ligula id, pellentesque nisl.',
-      onClick: () => { router.push('/database/matlabAnalysisTools') }
+      description: 'Material surface deformations in a snapshot of isotropic turbulence.',
+      onClick: () => { router.push('/visualizations/smoke') },
+      mediaSource: `${hostURL}visualizations/smoke4.png`
     }
   ];
 
@@ -67,9 +69,9 @@ export const Visualizations: FC = () => {
           <Grid key={i.title} item className="card-list">
             <CardStyled
               title={i.title}
-              type={i.type}
               description={i.description}
               onClick={i.onClick}
+              mediaSource={i.mediaSource}
             />
           </Grid>
         )}
