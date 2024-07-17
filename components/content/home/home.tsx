@@ -13,7 +13,6 @@ import mainImage from 'public/JHTDB2_snapshots.png';
 const Styled = styled.div`
   .points {
     display: flex;
-    justify-content: center;
   }
 
 

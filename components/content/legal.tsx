@@ -22,6 +22,7 @@ export const Legal: FC = () => {
         website and web services at their own risk. JHU does not warrant that the functional
         aspects of the website will be uninterrupted or error free, and may make changes to the site without notice.
         <br />
+        <br />
         Last update: 7/5/2024 6:59:40 PM
       </p>
 

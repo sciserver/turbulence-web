@@ -73,6 +73,26 @@ export const About: FC = () => {
       <br />
       <br />
 
+      <h3>Technical Staff</h3>
+      Victor Paul
+      <br />
+      <br />
+      Jan VandenBerg (+ sadly passed away in 2021)
+      <br />
+      <br />
+      Suzanne Werner
+      <br />
+      <br />
+      Michael Schnaubelt
+      <br />
+      <br />
+      Dmitry Medvedev
+      <br />
+      <br />
+      Juliana Jaime
+      <br />
+      <br />
+
       <h3>Collaborators</h3>
 
       Shiyi Chen (South University of Science and Technology, China)
@@ -121,23 +141,6 @@ export const About: FC = () => {
       <br />
       <br />
       German Saltar (Univ. of Puerto Rico, visiting student summer 2019)
-      <br />
-      <br />
-
-      <h3>Technical Staff</h3>
-      Victor Paul
-      <br />
-      <br />
-      Jan VandenBerg (+ sadly passed away in 2021)
-      <br />
-      <br />
-      Suzanne Werner
-      <br />
-      <br />
-      Dmitry Medvedev
-      <br />
-      <br />
-      Juliana Jaime
       <br />
       <br />
 
