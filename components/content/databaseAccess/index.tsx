@@ -61,21 +61,21 @@ export const DatabaseAccess: FC = () => {
       type: 'Guide',
       description: 'Matlab code including demo to be executed on user\'s remote computer to access arrays of data using \
                     virtual sensor array method.',
-      onClick: () => { router.push('/database/webServices') }
+      onClick: () => { router.push('/database/local/matlab') }
     },
     {
       title: 'Python Local',
       type: 'Guide',
       description: 'Python code (jupyter notebook) including demo to be executed on user\'s remote computer to access \
       arrays of data using virtual sensor array method.',
-      onClick: () => { router.push('/database/webServices') }
+      onClick: () => { router.push('/database/local/python') }
     },
     {
       title: 'Python Sciserver',
       type: 'Guide',
       description: 'Python code (jupyter notebook) including demo to be executed on user\'s Sciserver environment to access \
       arrays of data using virtual sensor array method. Users must create a SciServer account to use this service.',
-      onClick: () => { router.push('/database/webServices') }
+      onClick: () => { router.push('/database/pythonSciserver') }
     },
     {
       title: 'Cutout Service',
@@ -91,6 +91,7 @@ export const DatabaseAccess: FC = () => {
       <h2>Authorization Token for the Johns Hopkins Turbulence Databases</h2>
       <p className="token-description">
         For requests of less than 4096 points, the following testing identifier can be used.
+        <br />
         <iframe
           src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=a11y-dark&wt=bw&l=text&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=24px&ph=22px&ln=false&fl=1&fm=IBM+Plex+Mono&fs=15.5px&lh=133%25&si=false&es=2x&wm=false&code=edu.jhu.pha.turbulence.testing-201406"
           className="code"
