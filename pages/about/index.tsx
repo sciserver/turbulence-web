@@ -1,5 +1,5 @@
 import { Layout } from "components/common/layout";
-import { About } from "components/content/about/about";
+import { About } from "components/content/about";
 
 // TODO: imp loading animation here
 export default function AboutPage() {
