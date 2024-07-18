@@ -104,7 +104,7 @@ export const Publications: FC = () => {
           <br />
         </span>
         <h2>Sample publications of Turbulence Database usage</h2>
-        <iframe height={iframeHeight} src="https://bibbase.org/service/mendeley/75799766-8e2d-3c98-81f9-e3efa41233d0/group/c9329632-2a50-3043-b803-cadc8dbdfc3f"></iframe>
+        <iframe title="Sample publication embedded code from BibBase" height={iframeHeight} src="https://bibbase.org/service/mendeley/75799766-8e2d-3c98-81f9-e3efa41233d0/group/c9329632-2a50-3043-b803-cadc8dbdfc3f"></iframe>
       </div>
     </Styled>
   );

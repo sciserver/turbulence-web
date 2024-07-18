@@ -1,7 +1,6 @@
 import { FC, useContext, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import Link from 'next/link';
 import styled from 'styled-components';
 
 import { AppContext } from 'context';

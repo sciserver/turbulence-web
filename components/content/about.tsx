@@ -1,9 +1,6 @@
 
-import { FC, useContext } from 'react';
-import { useRouter } from 'next/router';
+import { FC } from 'react';
 import styled from 'styled-components';
-
-import { AppContext } from 'context';
 
 
 const Styled = styled.div`
@@ -19,10 +16,6 @@ const Styled = styled.div`
 `;
 
 export const About: FC = () => {
-
-  const router = useRouter();
-
-  const { setTabOption } = useContext(AppContext);
 
   return (
     <Styled>

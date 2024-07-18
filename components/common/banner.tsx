@@ -27,7 +27,6 @@ const Styled = styled.div<{ bannerwidth: number }>`
 export const Banner = () => {
 
   const [bannerwidth, setBannerWidth] = useState<number>(0);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const handleWindowResize = () => {
     setBannerWidth(window.innerWidth);
@@ -38,11 +37,6 @@ export const Banner = () => {
     window.addEventListener('resize', handleWindowResize);
     setBannerWidth(window.innerWidth);
   }, []);
-
-  useEffect(() => {
-    console.log({ isLoading });
-
-  }, [isLoading]);
 
   return <Styled {...{ bannerwidth }}>
     <h1 className="centered">Johns Hopkins Turbulence Databases</h1>
