@@ -1,0 +1,99 @@
+[
+  {
+    "title": "Faculty",
+    "people": [
+      "Randal Burns (Computer Science)",
+      "Gregory Eyink (Applied Mathematics & Statistics)",
+      "Charles Meneveau (Mechanical Engineering)",
+      "Alex Szalay (Physics and Astronomy)",
+      "Tamer Zaki (Mechanical Engineering)",
+      "Ethan Vishniac (Physics and Astronomy)",
+      "Thomas Haine (Earth & Planetary Sciences)"
+    ]
+  },
+  {
+    "title": "Senior Researchers",
+    "people": [
+      "Gerard Lemson (Physics and Astronomy)"
+    ]
+  },
+  {
+    "title": "Postdocs",
+    "people": [
+      "Hanxun Yao (Mechanical Engineering)"
+    ]
+  },
+  {
+    "title": "Graduate Students",
+    "people": [
+      "Ariel Lubonja (Computer Science)",
+      "Yue Hao (Mechanical Engineering)"
+    ]
+  },
+  {
+    "title": "Technical Staff",
+    "people": [
+      "Victor Paul",
+      "Jan VandenBerg (+ sadly passed away in 2021)",
+      "Suzanne Werner",
+      "Michael Schnaubelt",
+      "Dmitry Medvedev",
+      "Juliana Jaime"
+    ]
+  },
+  {
+    "title": "Collaborators",
+    "people": [
+      "Shiyi Chen (South University of Science and Technology, China)",
+      "MyoungKyu Lee (Univ. Houston)",
+      "Nicholas Malaya (Univ. Texas, Austin)",
+      "Robert D. Moser (Univ. Texas, Austin)",
+      "Jesus Pulido (Los Alamos)",
+      "Daniel Livescu (Los Alamos)",
+      "P.K. Yeung (Georgia Tech.)",
+      "Annick Pouquet (NCAR)",
+      "Duane Rosenberg (NOAA)",
+      "Edward Patton (NCAR)",
+      "Peter Sullivan (NCAR)"
+    ]
+  },
+  {
+    "title": "Visitors",
+    "people": [
+      "Edo Frederix (Eindhoven Univ., visiting student summer 2011)",
+      "Kai Buerger (Technical Univ. Muenchen, visiting student, summer 2011)",
+      "José-Hugo Elsas (Universidade Federal do Rio de Janeiro, visiting PhD student 2016-2017)",
+      "German Saltar (Univ. of Puerto Rico, visiting student summer 2019)"
+    ]
+  },
+  {
+    "title": "Former Group Members",
+    "people": [
+      "Hussein Aluie",
+      "Tamás Budavári (Physics and Astronomy)",
+      "Laurent Chevillard",
+      "Ed Givelberg (Physics and Astronomy)",
+      "Jason Graham",
+      "Kalin Kanov (Computer Science)",
+      "Cristian Constantin Lalescu (Applied Math and Statistics)",
+      "Yi Li",
+      "Eric Perlman",
+      "Minping Wan",
+      "Xiaodan Wang",
+      "Alainna White",
+      "Michael Wilczek (Mechanical Engineering)",
+      "Zuoli Xiao",
+      "Yunke Yang",
+      "Huidan Yu",
+      "Kung Yang",
+      "Stephen Hamilton (Computer Science)",
+      "Perry Johnson (Mechanical Engineering)",
+      "Jin Lee (Mechanical Engineering)",
+      "Mohammad Danish (Mechanical Engineering)",
+      "Rohit Ravoori (Computer Science)",
+      "Akshat Gupta",
+      "Zhao Wu",
+      "Mengze Wang"
+    ]
+  }
+]
