@@ -57,9 +57,9 @@ export const DatabaseAccess: FC = () => {
       onClick: () => { router.push('/database/query') }
     },
     {
-      title: 'Matlab Local',
+      title: 'Matlab™ Local',
       type: 'Guide',
-      description: 'Matlab code including demo to be executed on user\'s remote computer to access arrays of data using \
+      description: 'Matlab™ code including demo to be executed on user\'s remote computer to access arrays of data using \
                     virtual sensor array method.',
       onClick: () => { router.push('/database/local/matlab') }
     },

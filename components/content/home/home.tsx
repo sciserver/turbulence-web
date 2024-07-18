@@ -91,17 +91,16 @@ export const Home: FC = () => {
         </p>
         <p>
           Access to the data is facilitated by <strong> Web Service Interfaces </strong>that permit numerical experiments
-          to be run across the Internet. We offer Python and Matlab interfaces layered above <Link href="/database/">Web Services</Link>
-          so that scientists can use familiar programming tools. Python and Matlab codes can be run on client platforms.
+          to be run across the Internet. We offer Python and Matlab™ interfaces layered above <Link href="/database/">Web Services </Link>
+          so that scientists can use familiar programming tools. Python and Matlab™ codes can be run on client platforms.
           Python can also be run on <Link href="http://sciserver.org/" target="_blank">Sciserver</Link>, a fully integrated
           cyberinfrastructure system encompassing related tools and services to enable researchers to cope with scientific big data.
           Subsets of the data can be downloaded in <strong>hdf5</strong>  file format using the <Link href="https://turbulence.idies.jhu.edu/cutout/" target="_blank">data cutout service</Link>.
         </p>
         <p>
-          For initial experimentation and familiarization of datasets and access modes, <strong>web-browser manual queries</strong>
+          For initial experimentation and familiarization of datasets and access modes, <strong>web-browser manual querying </strong>
           at individual points and times is also supported. Evaluation of velocity and pressure at arbitrary points and time is
-          supported using interpolations (Lagrange Polynomials and Splines) executed on the database close to the data (for details,
-          see <Link href="/database/">documentation page</Link>). Particle tracking can be performed both forward and backward in
+          supported using interpolations (Lagrange Polynomials and Splines) executed on the database close to the data. Particle tracking can be performed both forward and backward in
           time using a second order accurate Runge-Kutta integration scheme.
         </p>
         <p>
@@ -121,7 +120,7 @@ export const Home: FC = () => {
         <p>
           Recent datasets are being stored using the Zarr storage format with 64-cube “buckets”, instead of the Z-curve ordering used for the legacy
           datasets. Also, data are being migrated to <strong>Ceph-FS</strong> storage from the original SQL-database and FileDB storage modalities.
-          New more modular Python and Matlab <Link href="/datasets/">codes</Link> use the REST interface instead of the legacy SOAP interface.
+          New more modular Python and Matlab™ <Link href="/database/">codes</Link> use the REST interface instead of the legacy SOAP interface.
         </p>
         {loading ?
           <div className="loading">Loading...</div>
