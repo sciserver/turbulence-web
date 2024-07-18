@@ -1,19 +1,22 @@
-import { FC, useContext, useEffect } from 'react';
+import { FC, useContext, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
 import styled from 'styled-components';
-import { Chip, Typography } from '@mui/material';
-import { Download as DownloadIcon } from '@mui/icons-material';
 
 import { AppContext } from 'context';
+import { mediaQuery } from 'components/common/layout';
 import { BreadCrumbParent, BreadCrumbsStyled } from 'components/common/breadcrumbs';
 
-import mainImage from 'public/JHTDB2_snapshots.png';
+import mainImage from 'public/databaseAccess/python-local.png';
 
 const Styled = styled.div`
   .content {
-    display: flex;
+    @media (width >= ${mediaQuery}px) {
+      display: flex;
+      align-items: center;
+      gap: 5%;
+    }
   }
 
   .download-links {
@@ -26,56 +29,54 @@ export const PythonLocal: FC = () => {
   const router = useRouter();
 
   const { setTabOption } = useContext(AppContext);
+  const [displayImage, setDisplayImage] = useState<boolean>(true);
+
+  const handleWindowWidth = () => {
+    if (window.innerWidth >= mediaQuery) {
+      setDisplayImage(true);
+      return;
+    }
+    setDisplayImage(false);
+  };
 
   // ON MOUNT: UI config
   useEffect(() => {
+    window.addEventListener('resize', handleWindowWidth);
     setTabOption(router.asPath.split('/')[1]);
+
+    handleWindowWidth();
   }, []);
 
   const breadCrumbsParents: BreadCrumbParent[] = [
     { name: 'Database Access', url: '/database' }
-  ]
+  ];
 
   return (
     <Styled>
       <BreadCrumbsStyled parents={breadCrumbsParents} componentName="Python Local" />
+      <br />
       <div className="content">
         <div>
-          <br />
-          <h1>Python Local</h1>
-          <br />
-          <h3>Download</h3>
-          <p>
-            <strong>Matlab Code:</strong> Turbmat-Tools-0.3.2
-          </p>
-          <Chip
-            className="download-links"
-            component="a"
-            href="https://turbulence.pha.jhu.edu/download/Turbmat-Tools-0.3.2.tar.gz"
-            target="_blank"
-            label="Download tar.gz here"
-            icon={<DownloadIcon fontSize="small" />}
-          />
-          <Chip
-            component="a"
-            href="https://turbulence.pha.jhu.edu/download/Turbmat-Tools-0.3.2.zip"
-            target="_blank"
-            label="Download zip here"
-            icon={<DownloadIcon fontSize="small" />}
-          />
-          <p>
-            This downloads a directory which contains a set of Matlab analysis tools. Included are several ready to use Matlab scripts that provide functionality for plotting/animating velocity and vorticity fields, computing and plotting longitudinal energy spectra, and computing PDF's of velocity, pressure, and velocity increments. Each script will prompt the user for any required input information using GUI boxes so no modifications are required by the user.
-          </p>
-          <p>
-            Note that a copy of <Link href="/database/webServices/matlab">Turbmat</Link> is required for Turbmat-Tools to run.
-          </p>
-          <p>
-            Please see the README file for more information.
-          </p>
+          {displayImage &&
+            <Image src={mainImage} height={300} alt="Turbulence figure 1" />
+          }
         </div>
         <div>
-          <Image src={mainImage} width={200} height={200} alt="Turbulence figure 1" />
+          <h1>Python Local</h1>
+          <br />
+          <h3><Link href="">Download</Link> a Python notebook Getdata_JHTDB_2.ipynb</h3>
+          <p>
+            <Link href="">Direct link to github repository </Link> containing the <strong>Getdata_JHTDB_2.ipynb </strong>
+            file, as well as other codes being run on the JHTDB backend.
+          </p>
+          <p>
+            <strong>Overview:</strong>  The DEMO Python code illustrates sampling velocities
+            on arrays of points (a 2D plane, a 3D volume, random sets of points, and a time-history
+            at a single point). Users can execute the Python code on their local computer and it will
+            query the database during execution.
+          </p>
         </div>
+
       </div>
     </Styled>
   );
