@@ -42,15 +42,15 @@ export const CardStyled: FC<CardLayout> = ({ title, onClick, description, type, 
         />
       }
       <CardContent>
-        <h3 dangerouslySetInnerHTML={{ __html: title }}></h3>
+        <h3 dangerouslySetInnerHTML={{ __html: title }} />
         {subtitle &&
-          <h5 dangerouslySetInnerHTML={{ __html: subtitle }}></h5>
+          <h5 dangerouslySetInnerHTML={{ __html: subtitle }} />
         }
         {type &&
           <Chip size="small" className="tag" label={type} variant="outlined" color="secondary" />
         }
         {description &&
-          <p dangerouslySetInnerHTML={{ __html: description }}></p>
+          <p dangerouslySetInnerHTML={{ __html: description }} />
         }
       </CardContent>
       <CardActions>

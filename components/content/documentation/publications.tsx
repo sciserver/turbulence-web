@@ -62,7 +62,7 @@ export const Publications: FC = () => {
         <Image className="responsive" src={mainImage} height={450} alt="Publications" />
       }
       <div className="content">
-        <h2>Publications and abstracts</h2>
+        <h1>Publications and abstracts</h1>
         <span>
           ✪   Yi Li, Eric Perlman, Minping Wan, Yunke Yang, Charles Meneveau, Randal Burns, Shiyi Chen, Alexander Szalay, and Gregory Eyink. A public turbulence database cluster and applications to study Lagrangian evolution of velocity increments in turbulence. Journal of Turbulence, 9:N31, 2008. [ <Link href="http://dx.doi.org/10.1080/14685240802376389">DOI</Link> | <Link href="http://arxiv.org/abs/0804.1703">arXiv</Link> ]
           <br />

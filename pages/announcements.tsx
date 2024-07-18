@@ -1,11 +1,11 @@
 import { Layout } from "components/common/layout";
-import { Home } from "components/content/home";
+import { Announcements } from "components/content/announcements";
 
 // TODO: imp loading animation here
-export default function HomePage() {
+export default function AnnouncementsPage() {
   return <>
     <Layout>
-      <Home />
+      <Announcements />
     </Layout>
   </>;
 };

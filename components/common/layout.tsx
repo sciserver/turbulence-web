@@ -30,7 +30,7 @@ export const Layout: FC<Props> = ({ children }) => {
       <Banner />
       <TabMenu />
       <Alert severity="success">
-        <strong>NOTICE:</strong> June-26th-2024: All services are functioning normally. For past announcements, please <Link href="https://turbulence.pha.jhu.edu/announcements.aspx">click here</Link>
+        <strong>NOTICE:</strong> June-26th-2024: All services are functioning normally. For past announcements, please <Link href="/announcements">click here</Link>
       </Alert>
       <main>{children}</main>
       <Footer />
