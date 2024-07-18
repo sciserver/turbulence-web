@@ -31,18 +31,18 @@ export const Windfarms: FC = () => {
     {
       title: 'LES of large wind farm under conventionally neutral atmospheric conditions ',
       subtitle: 'Coming soon',
-      onClick: () => { },
+      onClick: () => { }
     },
     {
       title: 'LES of large wind farm during a diurnal cycle',
       subtitle: 'Coming soon',
-      onClick: () => { },
+      onClick: () => { }
     }
   ];
 
   const breadCrumbsParents: BreadCrumbParent[] = [
     { name: 'Datasets', url: '/datasets' }
-  ]
+  ];
 
   return (
     <Styled>

@@ -68,9 +68,15 @@ export const Footer = () => {
 
   return <Styled {...{ footerwidth }}>
     <div className="info">
-      <h2 onClick={() => { router.push('/contact') }}>Contact</h2>
-      <h2 onClick={() => { router.push('/about') }}>About</h2>
-      <h2 onClick={() => { router.push('/legal') }}>Legal</h2>
+      <h2 aria-hidden="true" onClick={() => {
+        router.push('/contact');
+      }}>Contact</h2>
+      <h2 aria-hidden="true" onClick={() => {
+        router.push('/about');
+      }}>About</h2>
+      <h2 aria-hidden="true" onClick={() => {
+        router.push('/legal');
+      }}>Legal</h2>
     </div>
     <div className="sponsors">
       <h4>JHTDB operates with support from:</h4>

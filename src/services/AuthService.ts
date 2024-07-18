@@ -1,18 +1,18 @@
 import { ACCESS_TOKEN_KEY } from 'src/utils/keys';
 
-export class AuthService {
-  static getToken(): string {
+export const AuthService = {
+  getToken(): string {
     return sessionStorage.getItem(ACCESS_TOKEN_KEY) || '';
-  }
+  },
 
-  static isAuthenticated(): boolean {
+  isAuthenticated(): boolean {
     return sessionStorage.getItem(ACCESS_TOKEN_KEY) != null;
-  }
+  },
 
-  static async login(
-    token: string,
+  async login(
+    token: string
   ) {
     sessionStorage.setItem(ACCESS_TOKEN_KEY, token);
   }
 
-}
+};

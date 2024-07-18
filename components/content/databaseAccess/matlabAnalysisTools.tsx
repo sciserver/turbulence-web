@@ -34,7 +34,7 @@ export const MatlabAnalysisTools: FC = () => {
 
   const breadCrumbsParents: BreadCrumbParent[] = [
     { name: 'Database Access', url: '/database' }
-  ]
+  ];
 
   return (
     <Styled>

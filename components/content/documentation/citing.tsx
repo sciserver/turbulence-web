@@ -118,4 +118,4 @@ export const Citing: FC = () => {
       </blockquote>
     </Styled>
   );
-}
+};

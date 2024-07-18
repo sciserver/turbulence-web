@@ -47,7 +47,7 @@ export const TransitionalBL: FC = () => {
   const breadCrumbsParents: BreadCrumbParent[] = [
     { name: 'Datasets', url: '/datasets' },
     { name: 'Wall Bounded Turbulence', url: '/datasets/wallBoundedTurbulence' }
-  ]
+  ];
 
   return (
     <Styled>

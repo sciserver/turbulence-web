@@ -35,7 +35,9 @@ export const WallBoundedTurbulence: FC = () => {
       description: 'Direct numerical simulation (DNS) of channel flow turbulence in a domain of size 8π × 2 × 3π, \
                     using 2048 × 512 × 1536 nodes. The full time evolution is available, over a flow-through time \
                     across across the 8π channel',
-      onClick: () => { router.push('/datasets/wallBoundedTurbulence/channelFlow') },
+      onClick: () => {
+        router.push('/datasets/wallBoundedTurbulence/channelFlow'); 
+      },
       mediaSource: `${hostURL}datasets/channel-large-banner.jpeg`
     },
     {
@@ -43,7 +45,9 @@ export const WallBoundedTurbulence: FC = () => {
       subtitle: 'channel5200',
       description: 'DNS of channel flow turbulence in a domain of size 8π × 2 × 3π, using 10240 × 1536 × 7680 \
                     nodes. A total of 11 snapshots are available.',
-      onClick: () => { router.push('/datasets/wallBoundedTurbulence/channel5200') },
+      onClick: () => {
+        router.push('/datasets/wallBoundedTurbulence/channel5200'); 
+      },
       mediaSource: `${hostURL}datasets/channel5200-banner.png`
     },
     {
@@ -51,14 +55,16 @@ export const WallBoundedTurbulence: FC = () => {
       subtitle: 'transition_bl',
       description: 'DNS of a transitional boundary layer using 3320 × 224 × 2048 grid points. \The full time evolution \
                     is available, over about 1 flow-through time across the length of simulation domain.',
-      onClick: () => { router.push('/datasets/wallBoundedTurbulence/transitionalBL') },
+      onClick: () => {
+        router.push('/datasets/wallBoundedTurbulence/transitionalBL'); 
+      },
       mediaSource: `${hostURL}datasets/transition_bl.png`
     }
   ];
 
   const breadCrumbsParents: BreadCrumbParent[] = [
     { name: 'Datasets', url: '/datasets' }
-  ]
+  ];
 
   return (
     <Styled>

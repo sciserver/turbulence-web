@@ -31,28 +31,36 @@ export const Datasets: FC = () => {
     {
       title: 'Homogeneous Turbulence',
       subtitle: 'Direct  Numerical Simulations',
-      onClick: () => { router.push('/datasets/homogeneousTurbulence') },
+      onClick: () => {
+        router.push('/datasets/homogeneousTurbulence'); 
+      },
       mediaSource: `${hostURL}datasets/homogeneousTurbulence.png`
 
     },
     {
       title: 'Wall Bounded Turbulence ',
       subtitle: 'Direct  Numerical Simulations',
-      onClick: () => { router.push('/datasets/wallBoundedTurbulence') },
+      onClick: () => {
+        router.push('/datasets/wallBoundedTurbulence'); 
+      },
       mediaSource: `${hostURL}datasets/wallBoundedTurbulence.png`
 
     },
     {
       title: 'Geophysical Turbulence ',
       subtitle: 'DNS and Large Eddy Simulations',
-      onClick: () => { router.push('/datasets/geophysicalTurbulence') },
+      onClick: () => {
+        router.push('/datasets/geophysicalTurbulence'); 
+      },
       mediaSource: `${hostURL}datasets/geophysicalTurbulence.png`
 
     },
     {
       title: 'Windfarms (coming soon)',
       subtitle: 'Large Eddy Simulations',
-      onClick: () => { router.push('/datasets/windfarms') },
+      onClick: () => {
+        router.push('/datasets/windfarms'); 
+      }
     }
   ];
 

@@ -54,35 +54,45 @@ export const DatabaseAccess: FC = () => {
       title: 'Web browser pointwise',
       type: 'External link',
       description: 'Directly obtain data using single-point virtual sensor method.',
-      onClick: () => { window.open('https://turbulence.pha.jhu.edu/webquery/query.aspx', '_blank', 'noopener,noreferrer') }
+      onClick: () => {
+        window.open('https://turbulence.pha.jhu.edu/webquery/query.aspx', '_blank', 'noopener,noreferrer');
+      }
     },
     {
       title: 'Matlab™ Local',
       type: 'Guide',
       description: 'Matlab™ code including demo to be executed on user\'s remote computer to access arrays of data using \
                     virtual sensor array method.',
-      onClick: () => { router.push('/database/local/matlab') }
+      onClick: () => {
+        router.push('/database/local/matlab');
+      }
     },
     {
       title: 'Python Local',
       type: 'Guide',
       description: 'Python code (jupyter notebook) including demo to be executed on user\'s remote computer to access \
       arrays of data using virtual sensor array method.',
-      onClick: () => { router.push('/database/local/python') }
+      onClick: () => {
+        router.push('/database/local/python');
+      }
     },
     {
       title: 'Python Sciserver',
       type: 'Guide',
       description: 'Python code (jupyter notebook) including demo to be executed on user\'s Sciserver environment to access \
       arrays of data using virtual sensor array method. Users must create a SciServer account to use this service.',
-      onClick: () => { router.push('/database/pythonSciserver') }
+      onClick: () => {
+        router.push('/database/pythonSciserver');
+      }
     },
     {
       title: 'Cutout Service',
       type: 'External link',
       description: 'Submit requests for gridded raw data. The service generates output in HDF5 format and an XDMF file for \
                      (e.g.) visualization in Paraview. Users must create a SciServer account to use this service.',
-      onClick: () => { router.push('/database/cutout') }
+      onClick: () => {
+        router.push('/database/cutout');
+      }
     }
   ];
 
@@ -93,6 +103,7 @@ export const DatabaseAccess: FC = () => {
         For requests of less than 4096 points, the following testing identifier can be used.
         <br />
         <iframe
+          title="Code snippet for authorization token"
           src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=a11y-dark&wt=bw&l=text&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=24px&ph=22px&ln=false&fl=1&fm=IBM+Plex+Mono&fs=15.5px&lh=133%25&si=false&es=2x&wm=false&code=edu.jhu.pha.turbulence.testing-201406"
           className="code"
           sandbox="allow-scripts allow-same-origin">

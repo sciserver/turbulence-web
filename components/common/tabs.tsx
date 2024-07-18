@@ -23,11 +23,11 @@ export const TabMenu: FC = () => {
   const handleTabChange = (event: React.SyntheticEvent, newValue: string) => {
     setTabOption(newValue);
     router.push(`/${newValue}`);
-  }
+  };
 
   const handleSameOptionClick = () => {
     router.push(`/${tabOption}`);
-  }
+  };
 
   const tabOptions: TabOption[] = [
     { name: 'Home', value: 'home' },

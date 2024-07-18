@@ -26,7 +26,7 @@ export const WebServices: FC = () => {
 
   const breadCrumbsParents: BreadCrumbParent[] = [
     { name: 'Database Access', url: '/database' }
-  ]
+  ];
 
   return (
     <Styled>

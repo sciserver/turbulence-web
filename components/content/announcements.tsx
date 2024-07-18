@@ -8,7 +8,7 @@ import { AppContext } from 'context';
 import { mediaQuery } from 'components/common/layout';
 
 // Media
-import announcements from 'public/announcements.json'
+import announcements from 'public/docs/announcements.json';
 import isotropicImage from 'public/datasets/isotropic.jpg';
 import mhdImage from 'public/datasets/mhd-large.jpeg';
 import channelImage from 'public/datasets/channel-vert.jpeg';

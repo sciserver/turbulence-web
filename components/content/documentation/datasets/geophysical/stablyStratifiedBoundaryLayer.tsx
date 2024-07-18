@@ -48,7 +48,7 @@ export const StablyStratifiedBoundaryLayer: FC = () => {
   const breadCrumbsParents: BreadCrumbParent[] = [
     { name: 'Datasets', url: '/datasets' },
     { name: 'Geophysical Turbulence', url: '/datasets/geophysicalTurbulence' }
-  ]
+  ];
 
   return (
     <Styled>

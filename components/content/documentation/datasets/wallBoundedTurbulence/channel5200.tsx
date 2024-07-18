@@ -47,7 +47,7 @@ export const Channel5200: FC = () => {
   const breadCrumbsParents: BreadCrumbParent[] = [
     { name: 'Datasets', url: '/datasets' },
     { name: 'Wall Bounded Turbulence', url: '/datasets/wallBoundedTurbulence' }
-  ]
+  ];
 
   return (
     <Styled>

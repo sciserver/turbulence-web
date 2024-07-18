@@ -1,5 +1,5 @@
-import { Layout } from "components/common/layout";
-import { Vortex } from "components/content/visualizations/vortex";
+import { Layout } from 'components/common/layout';
+import { Vortex } from 'components/content/visualizations/vortex';
 
 // TODO: imp loading animation here
 export default function VisualizationsPage() {

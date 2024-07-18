@@ -35,5 +35,5 @@ export const Layout: FC<Props> = ({ children }) => {
       <main>{children}</main>
       <Footer />
     </Styled>
-  )
-}
+  );
+};
