@@ -30,11 +30,6 @@ module.exports = withTM({
         permanent: true
       },
       {
-        source: '/database/query',
-        destination: 'https://turbulence.pha.jhu.edu/webquery/query.aspx',
-        permanent: false
-      },
-      {
         source: '/database/cutout',
         destination: 'http://turbulence.idies.jhu.edu/cutout/',
         permanent: true

@@ -54,7 +54,7 @@ export const DatabaseAccess: FC = () => {
       title: 'Web browser pointwise',
       type: 'External link',
       description: 'Directly obtain data using single-point virtual sensor method.',
-      onClick: () => { router.push('/database/query') }
+      onClick: () => { window.open('https://turbulence.pha.jhu.edu/webquery/query.aspx', '_blank', 'noopener,noreferrer') }
     },
     {
       title: 'Matlab™ Local',
