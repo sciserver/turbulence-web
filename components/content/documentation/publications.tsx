@@ -5,9 +5,9 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import { AppContext } from 'context';
-import mainImage from 'public/publications.png';
+import { mediaQuery } from 'components/common/layout';
 
-const mediaQuery = 800;
+import mainImage from 'public/publications.png';
 
 const Styled = styled.div`
   

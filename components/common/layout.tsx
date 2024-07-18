@@ -22,6 +22,8 @@ const Styled = styled.div`
   }
 `;
 
+export const mediaQuery = 800;
+
 export const Layout: FC<Props> = ({ children }) => {
   return (
     <Styled>
