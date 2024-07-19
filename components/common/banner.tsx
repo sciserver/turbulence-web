@@ -39,6 +39,6 @@ export const Banner = () => {
   }, []);
 
   return <Styled {...{ bannerwidth }}>
-    <h1 className="centered">Johns Hopkins Turbulence Databases</h1>
+    <h1 className="centered">Johns Hopkins Turbulence Database</h1>
   </Styled>;
 };
