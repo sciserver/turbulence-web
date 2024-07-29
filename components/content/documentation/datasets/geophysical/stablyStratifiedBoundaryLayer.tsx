@@ -60,7 +60,7 @@ export const StablyStratifiedBoundaryLayer: FC = () => {
         </div>
         <div className="content">
           <h3>Simulation data provenance: Dataset generated at NCAR using the NCAR Large Eddy Simulation code</h3>
-          <span className="caption">See <Link href={`${hostURL}docs/README_SABL2048.pdf`} target="_blank" download>README-SABLE2048.pdf</Link> for more details</span>
+          <span className="caption">See <Link href={`${hostURL}docs/README_SABL2048.pdf`} target="_blank" download>README-SABL2048.pdf</Link> for more details</span>
           <br />
           <br />
           <span>
@@ -99,7 +99,7 @@ export const StablyStratifiedBoundaryLayer: FC = () => {
             <br />
           </span >
           <span>
-            ✪  Two data sets are available: time-resolved during a relatively short period of time consisting of 100 time-steps (high-frequency dataset name = “sable2048high”), and 20 statistically independent snapshots (low-frequency dataset name = “sable2048low”).
+            ✪  Two data sets are available: time-resolved during a relatively short period of time consisting of 100 time-steps (high-frequency dataset name = “sabl2048high”), and 20 statistically independent snapshots (low-frequency dataset name = “sabl2048low”).
             <br />
             <br />
           </span>
