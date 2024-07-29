@@ -1,21 +1,15 @@
-import { FC, useContext, useEffect, useMemo } from 'react';
+import { FC, useContext, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useQuery } from '@apollo/client';
 import styled from 'styled-components';
 
 import { AppContext } from 'context';
-import { POINTS_QUERIED } from 'src/graphql/points';
+import { PointsQueried } from 'components/content/pointsQueried';
 
 import mainImage from 'public/JHTDB2_snapshots.png';
 
 const Styled = styled.div`
-  .points {
-    text-align: right;
-  }
-
-
   img.responsive {
     max-width: 400px;
     width: 100%;
@@ -45,35 +39,12 @@ const Styled = styled.div`
     }
   }
 
-  .loading {
-    font-weight: bold;
-    display:inline-block;
-    font-family: monospace;
-    font-size: 30px;
-    clip-path: inset(0 3ch 0 0);
-    animation: l 1s steps(4) infinite;
-  }
-  
-  @keyframes l {
-    to {
-      clip-path: inset(0 -1ch 0 0)
-    }
-  }
 `;
 
 export const Home: FC = () => {
 
   const router = useRouter();
   const { setTabOption } = useContext(AppContext);
-
-  const { data } = useQuery(POINTS_QUERIED, { pollInterval: 5000 });
-
-  const points = useMemo<number>(() => {
-    if (data) {
-      return data.getPointsQueried;
-    }
-  }, [data]);
-
 
   // ON MOUNT: UI config
   useEffect(() => {
@@ -82,11 +53,7 @@ export const Home: FC = () => {
 
   return (
     <Styled>
-      {points &&
-        <div className="points">
-          <h3> {points.toLocaleString()} points queried</h3>
-        </div>
-      }
+      <PointsQueried />
       <div className="home">
         <div className="header">
           <h2>Welcome to the Johns Hopkins Turbulence Database <br /> JHTDB </h2>

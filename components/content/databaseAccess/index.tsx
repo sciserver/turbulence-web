@@ -1,20 +1,15 @@
-import { FC, useContext, useEffect, useMemo } from 'react';
-import { useQuery } from '@apollo/client';
+import { FC, useContext, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import { Grid } from '@mui/material';
 
 import { AppContext } from 'context';
-import { POINTS_QUERIED } from 'src/graphql/points';
+import { PointsQueried } from 'components/content/pointsQueried';
 import { CardLayout, CardStyled } from 'components/common/card';
 
 
 const Styled = styled.div`
-  .points {
-    text-align: right;
-  }
-
   .card-list {
     display: flex;  
     flex-wrap: wrap;
@@ -48,14 +43,6 @@ export const DatabaseAccess: FC = () => {
   const router = useRouter();
 
   const { setTabOption } = useContext(AppContext);
-
-  const { data } = useQuery(POINTS_QUERIED, { pollInterval: 5000 });
-
-  const points = useMemo<number>(() => {
-    if (data) {
-      return data.getPointsQueried;
-    }
-  }, [data]);
 
   // ON MOUNT: UI config
   useEffect(() => {
@@ -112,11 +99,7 @@ export const DatabaseAccess: FC = () => {
 
   return (
     <Styled>
-      {points &&
-        <div className="points">
-          <h3> {points.toLocaleString()} points queried</h3>
-        </div>
-      }
+      <PointsQueried />
       <h2>Authorization Token for the Johns Hopkins Turbulence Databases</h2>
       <p className="token-description">
         For requests of less than 4096 points, the following testing identifier can be used.
