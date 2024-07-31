@@ -64,7 +64,7 @@ export const MatlabLocal: FC = () => {
         <div>
           <h1>Matlab™ Local</h1>
           <br />
-          <h3><Link href="">Download</Link> a folder containing 2 Matlab™ files</h3>
+          <h3><Link href="https://github.com/sciserver/giverny/raw/master/DEMO_notebooks/DEMO_local_matlab_notebooks.zip">Download</Link> a folder containing 2 Matlab™ files</h3>
           <p>
             <strong>(1)</strong> The DEMO code Getdata_JHTDB_2.m which is the second-generation virtual sensors data access method for Matlab™
           </p>
