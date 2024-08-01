@@ -82,6 +82,12 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <title>Johns Hopkins Turbulence Database JHTDB</title>
+        <meta name="keywords" content="turbulence, database, jhu" />
+        <meta name="description" content="This website is a portal to an Open Numerical Turbulence Laboratory that enables access to
+            multi-Terabyte turbulence databases. The data reside on distributed nodes and disks on our database cluster
+            computers and are stored in small 3D sub-cubes to accelerate access speeds to small data subsets." />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
