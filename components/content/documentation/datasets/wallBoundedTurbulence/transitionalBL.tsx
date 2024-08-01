@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 import { AppContext } from 'context';
 import { BreadCrumbParent, BreadCrumbsStyled } from 'components/common/breadcrumbs';
+import { docsDownloadURL } from 'pages/_app';
 
 import mainImage from 'public/datasets/transition_bl.png';
 
@@ -59,7 +60,7 @@ export const TransitionalBL: FC = () => {
         </div>
         <div className="content">
           <h3>Simulation data provenance: Dr. Jin Lee and Prof. Tamer Zaki of JHU </h3>
-          <span className="caption">See <Link href="http://turbulence.pha.jhu.edu/docs/README-transition_bl.pdf" target="_blank">README-transition_bl </Link> for more details</span>
+          <span className="caption">See <Link href={`${docsDownloadURL}transition_bl/README-transition_bl.pdf`} target="_blank">README-transition_bl </Link> for more details</span>
           <br />
           <br />
           <span>
@@ -98,12 +99,12 @@ export const TransitionalBL: FC = () => {
             <br />
           </span>
           <span>
-            ✪  The y-locations of the grid points in the vertical direction can be downloaded from <Link href="http://turbulence.pha.jhu.edu/docs/transition_bl/y.txt" target="_blank">this text file</Link>.
+            ✪  The y-locations of the grid points in the vertical direction can be downloaded from <Link href={`${docsDownloadURL}transition_bl/y.txt`} target="_blank" download>this text file</Link>.
             <br />
             <br />
           </span>
           <span>
-            ✪  The time-averaged statistics can be downloaded from <Link href="http://turbulence.pha.jhu.edu/docs/transition_bl/Transition_BL_Time_Averaged_Profiles.h5">this HDF5 file</Link>. Brief notes are <Link href="http://turbulence.pha.jhu.edu/docs/transition_bl/Notes_for_Transition_BL_Time_Averaged_Profiles.txt" target="_blank">here</Link>.
+            ✪  The time-averaged statistics can be downloaded from <Link href={`${docsDownloadURL}transition_bl/Transition_BL_Time_Averaged_Profiles.h5`} download>this HDF5 file</Link>. Brief notes are <Link href={`${docsDownloadURL}transition_bl/Notes_for_Transition_BL_Time_Averaged_Profiles.txt`} target="_blank">here</Link>.
             <br />
             <br />
           </span>

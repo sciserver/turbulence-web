@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { FC } from 'react';
 import { styled } from 'styled-components';
 
+import { docsDownloadURL } from 'pages/_app';
+
 
 const Styled = styled.div`
  p, blockquote {
@@ -37,13 +39,13 @@ export const Citing: FC = () => {
 
       <h4>For presentations, posters, etc.., we suggest:</h4>
       <blockquote>
-        Data obtained from the JHTDB at http://turbulence.pha.jhu.edu
+        Data obtained from the JHTDB at http://turbulence.idies.jhu.edu
       </blockquote>
 
       <h4>For articles that use the channel flow data, we suggest also including:</h4>
       <blockquote>
         J.Graham, K.Kanov, X.I.A.Yang, M.K.Lee, N.Malaya, C.C.Lalescu, R.Burns, G.Eyink, A.Szalay, R.D.Moser.and C.Meneveau:
-        <Link href="https://turbulence.pha.jhu.edu/papers/Grahametal-JoT-2016-preprint.pdf" target="_blank">A Web Services - accessible
+        <Link href={`${docsDownloadURL}Grahametal-JoT-2016-preprint.pdf`} target="_blank">A Web Services - accessible
           database of turbulent channel flow and its use for testing a new integral wall model for LES</Link>.
         Journal of Turbulence 17(2), 181 - 215, 2016.(© Taylor & Francis, see <Link href="http://www.tandfonline.com/doi/pdf/10.1080/14685248.2015.1088656" target="_blank">http://www.tandfonline.com/doi/pdf/10.1080/14685248.2015.1088656</Link>)
       </blockquote>
@@ -58,7 +60,7 @@ export const Citing: FC = () => {
       <h4>For articles that use the mixing flow data, we suggest also including:</h4>
       <blockquote>
         D.Livescu, C.Canada, K.Kanov, R.Burns & IDIES staff, J.Pulido, "Homogeneous Buoyancy driven turbulence data set"(2014),
-        available at <Link href="http://turbulence.pha.jhu.edu/docs/README-HBDT.pdf" target="_blank"> http://turbulence.pha.jhu.edu/docs/README-HBDT.pdf</Link>
+        available at <Link href={`${docsDownloadURL}hbdt/README-HBDT.pdf`} target="_blank"> http://turbulence.idies.jhu.edu/docs/hbdt/README-HBDT.pdf</Link>
       </blockquote>
 
       <h4>For articles that use the 4096<sup>3</sup> isotropic turbulence, we suggest also including:</h4>

@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 import { AppContext } from 'context';
 import { BreadCrumbParent, BreadCrumbsStyled } from 'components/common/breadcrumbs';
+import { docsDownloadURL } from 'pages/_app';
 
 import rotatingImage from 'public/datasets/isotropic4096.jpg';
 
@@ -59,7 +60,7 @@ export const Isotropic4096Turbulence: FC = () => {
         </div>
         <div className="content">
           <h3>Simulation data provenance: Georgia Tech DNS code</h3>
-          <span className="caption">See <Link href="http://turbulence.pha.jhu.edu/docs/README-isotropic4096.pdf" target="_blank">README-isotropic4096 </Link> for more details</span>
+          <span className="caption">See <Link href={`${docsDownloadURL}README-isotropic4096.pdf`} target="_blank">README-isotropic4096 </Link> for more details</span>
           <br />
           <br />
           <span>

@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 import { AppContext } from 'context';
 import { BreadCrumbParent, BreadCrumbsStyled } from 'components/common/breadcrumbs';
+import { docsDownloadURL } from 'pages/_app';
 
 import mainImage from 'public/datasets/isotropic.jpg';
 
@@ -59,7 +60,7 @@ export const IsotropicTurbulence: FC = () => {
         </div>
         <div className="content">
           <h3>Simulation data provenance: JHU DNS code </h3>
-          <span className="caption">See <Link href="http://turbulence.pha.jhu.edu/docs/README-isotropic.pdf" target="_blank">README-isotropic</Link></span>
+          <span className="caption">See <Link href={`${docsDownloadURL}isotropic/README-isotropic.pdf`} target="_blank">README-isotropic</Link></span>
           <br />
           <br />
           <span>
@@ -98,12 +99,12 @@ export const IsotropicTurbulence: FC = () => {
             <br />
           </span>
           <span>
-            ✪  A table with the time history of the total kinetic energy and Taylor-scale Reynolds number as function of time can be downloaded from <Link href="http://turbulence.pha.jhu.edu/ener_Re_time.txt" target="_blank">this text file</Link>.
+            ✪  A table with the time history of the total kinetic energy and Taylor-scale Reynolds number as function of time can be downloaded from <Link href={`${docsDownloadURL}isotropic/ener_Re_time.txt`} target="_blank" download>this text file</Link>.
             <br />
             <br />
           </span>
           <span>
-            ✪  Radial spectrum E(k) averaged over time can be downloaded from <Link href="http://turbulence.pha.jhu.edu/spectrum.txt" target="_blank">this text file</Link>.
+            ✪  Radial spectrum E(k) averaged over time can be downloaded from <Link href={`${docsDownloadURL}isotropic/spectrum.txt`} target="_blank" download>this text file</Link>.
             <br />
             <br />
           </span>

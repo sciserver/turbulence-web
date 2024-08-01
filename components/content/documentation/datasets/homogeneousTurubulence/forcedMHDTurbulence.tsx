@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 import { AppContext } from 'context';
 import { BreadCrumbParent, BreadCrumbsStyled } from 'components/common/breadcrumbs';
+import { docsDownloadURL } from 'pages/_app';
 
 import mainImage from 'public/datasets/mhd-large.jpeg';
 
@@ -59,7 +60,7 @@ export const ForcedMHDTurbulence: FC = () => {
         </div>
         <div className="content">
           <h3>Simulation data provenance: JHU DNS code</h3>
-          <span className="caption">See <Link href="http://turbulence.pha.jhu.edu/docs/README-MHD.pdf" target="_blank">README-MHD</Link></span>
+          <span className="caption">See <Link href={`${docsDownloadURL}mhd/README-MHD.pdf`} target="_blank">README-MHD</Link></span>
           <br />
           <br />
           <span>
@@ -93,12 +94,14 @@ export const ForcedMHDTurbulence: FC = () => {
             <br />
           </span>
           <span>
-            ✪  A table with the spectra of the velocity, magnetic field, Elsasser variables, cross-helicity and magnetic helicity can be downloaded from <Link href="http://turbulence.pha.jhu.edu/Spectra-MHD.txt" target="_blank">this text file</Link>.
+            ✪  A table with the spectra of the velocity, magnetic field, Elsasser variables, cross-helicity and magnetic helicity can
+            be downloaded from <Link href={`${docsDownloadURL}mhd/Spectra-MHD.txt`} target="_blank" download>this text file</Link>.
             <br />
             <br />
           </span>
           <span>
-            ✪  A table with the time histories of energy and dissipation, both kinetic and magnetic, as well as of magnetic and cross helicity, can be downloaded from <Link href="http://turbulence.pha.jhu.edu/TimeSeries.txt" target="_blank"> this text file</Link>.
+            ✪  A table with the time histories of energy and dissipation, both kinetic and magnetic, as well as of magnetic and cross helicity,
+            can be downloaded from <Link href={`${docsDownloadURL}mhd/TimeSeries.txt`} target="_blank" download> this text file</Link>.
             <br />
             <br />
           </span>

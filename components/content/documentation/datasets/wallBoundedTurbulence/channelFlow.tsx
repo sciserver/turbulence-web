@@ -1,13 +1,14 @@
 import { FC, useContext, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
 import { AppContext } from 'context';
 import { BreadCrumbParent, BreadCrumbsStyled } from 'components/common/breadcrumbs';
+import { docsDownloadURL } from 'pages/_app';
 
 import mainImage from 'public/datasets/channel-vert.jpeg';
-import { useRouter } from 'next/router';
 
 const Styled = styled.div`
   .header {
@@ -59,7 +60,7 @@ export const ChannelFlow: FC = () => {
         </div>
         <div className="content">
           <h3>Simulation data provenance: Collaboration of UT Austin and JHU, using the UT Austin DNS code</h3>
-          <span className="caption">See <Link href="http://turbulence.pha.jhu.edu/docs/README-CHANNEL.pdf" target="_blank">README-CHANNEL</Link> for more details</span>
+          <span className="caption">See <Link href={`${docsDownloadURL}channel/README-CHANNEL.pdf`} target="_blank">README-CHANNEL</Link> for more details</span>
           <br />
           <br />
           <span>
@@ -99,38 +100,38 @@ export const ChannelFlow: FC = () => {
             <br />
           </span >
           <span>
-            ✪  The y-locations of the grid points in the vertical direction can be downloaded from <Link href="http://turbulence.pha.jhu.edu/docs/channel/y.txt" target="_blank">this text file</Link>.
-            The corresponding B-spline knot locations can be obtained from <Link href="http://turbulence.pha.jhu.edu/docs/channel/y-knots.txt" target="_blank">this text file</Link>.
+            ✪  The y-locations of the grid points in the vertical direction can be downloaded from <Link href={`${docsDownloadURL}channel/y.txt`} target="_blank" download>this text file</Link>.
+            The corresponding B-spline knot locations can be obtained from <Link href={`${docsDownloadURL}channel/y-knots.txt`} target="_blank" download>this text file</Link>.
             <br />
             <br />
           </span>
           <span>
-            ✪  A table with the time history of friction velocity Reynolds number can be downloaded from <Link href="http://turbulence.pha.jhu.edu/docs/channel/re-tau.txt" target="_blank">this text file</Link>.
+            ✪  A table with the time history of friction velocity Reynolds number can be downloaded from <Link href={`${docsDownloadURL}channel/re-tau.txt`} target="_blank" download>this text file</Link>.
             <br />
             <br />
           </span>
           <span>
-            ✪  A table with the vertical profiles of mean velocity, Reynolds shear stresses, viscous stress, normal stress, mean pressure, pressure variance and pressure-velocity covariance in viscous units, can be downloaded from <Link href="http://turbulence.pha.jhu.edu/docs/channel/profiles.txt" target="_blank">this text file</Link>.
+            ✪  A table with the vertical profiles of mean velocity, Reynolds shear stresses, viscous stress, normal stress, mean pressure, pressure variance and pressure-velocity covariance in viscous units, can be downloaded from <Link href={`${docsDownloadURL}channel/profiles.txt`} target="_blank" download>this text file</Link>.
             <br />
             <br />
           </span>
           <span>
             ✪  Files with tables of the streamwise (k<sub>x</sub>) spectra of u, v, w, p at various heights can be downloaded for the following y+ values:
-            <Link href="http://turbulence.pha.jhu.edu/docs/channel/spectra-kx-yplus-10.11.txt" target="_blank"> 10.11</Link>,
-            <Link href="http://turbulence.pha.jhu.edu/docs/channel/spectra-kx-yplus-29.89.txt" target="_blank"> 29.89</Link>,
-            <Link href="http://turbulence.pha.jhu.edu/docs/channel/spectra-kx-yplus-99.75.txt" target="_blank"> 99.75</Link>,
-            <Link href="http://turbulence.pha.jhu.edu/docs/channel/spectra-kx-yplus-371.6.txt" target="_blank"> 371.6</Link>,
-            <Link href="http://turbulence.pha.jhu.edu/docs/channel/spectra-kx-yplus-999.7.txt" target="_blank"> 999.7</Link>.
+            <Link href={`${docsDownloadURL}channel/spectra-kx-yplus-10.11.txt`} target="_blank" download> 10.11</Link>,
+            <Link href={`${docsDownloadURL}channel/spectra-kx-yplus-29.89.txt`} target="_blank" download> 29.89</Link>,
+            <Link href={`${docsDownloadURL}channel/spectra-kx-yplus-99.75.txt`} target="_blank" download> 99.75</Link>,
+            <Link href={`${docsDownloadURL}channel/spectra-kx-yplus-371.6.txt`} target="_blank" download> 371.6</Link>,
+            <Link href={`${docsDownloadURL}channel/spectra-kx-yplus-999.7.txt`} target="_blank" download> 999.7</Link>.
             <br />
             <br />
           </span >
           <span>
             ✪  Files with tables of the spanwise (k<sub>z</sub>) spectra of u, v, w, p at various heights can be downloaded for the following y+ values:
-            <Link href="http://turbulence.pha.jhu.edu/docs/channel/spectra-kx-yplus-10.11.txt" target="_blank"> 10.11</Link>,
-            <Link href="http://turbulence.pha.jhu.edu/docs/channel/spectra-kx-yplus-29.89.txt" target="_blank"> 29.89</Link>,
-            <Link href="http://turbulence.pha.jhu.edu/docs/channel/spectra-kx-yplus-99.75.txt" target="_blank"> 99.75</Link>,
-            <Link href="http://turbulence.pha.jhu.edu/docs/channel/spectra-kx-yplus-371.6.txt" target="_blank"> 371.6</Link>,
-            <Link href="http://turbulence.pha.jhu.edu/docs/channel/spectra-kx-yplus-999.7.txt" target="_blank"> 999.7</Link>.
+            <Link href={`${docsDownloadURL}channel/spectra-kz-yplus-10.11.txt`} target="_blank" download> 10.11</Link>,
+            <Link href={`${docsDownloadURL}channel/spectra-kz-yplus-29.89.txt`} target="_blank" download> 29.89</Link>,
+            <Link href={`${docsDownloadURL}channel/spectra-kz-yplus-99.75.txt`} target="_blank" download> 99.75</Link>,
+            <Link href={`${docsDownloadURL}channel/spectra-kz-yplus-371.6.txt`} target="_blank" download> 371.6</Link>,
+            <Link href={`${docsDownloadURL}channel/spectra-kz-yplus-999.7.txt`} target="_blank" download> 999.7</Link>.
             <br />
             <br />
           </span >

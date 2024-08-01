@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 import { AppContext } from 'context';
 import { BreadCrumbParent, BreadCrumbsStyled } from 'components/common/breadcrumbs';
+import { docsDownloadURL } from 'pages/_app';
 
 import rotatingImage from 'public/datasets/isotropic8192.png';
 
@@ -59,7 +60,7 @@ export const Isotropic8192Turbulence: FC = () => {
         </div>
         <div className="content">
           <h3>Simulation data provenance: Georgia Tech DNS code </h3>
-          <span className="caption">See <Link href="http://turbulence.pha.jhu.edu/docs/README-isotropic8192.pdf" target="_blank">README-isotropic8192 </Link> for more details</span>
+          <span className="caption">See <Link href={`${docsDownloadURL}README-isotropic8192.pdf`} target="_blank">README-isotropic8192 </Link> for more details</span>
           <br />
           <br />
           <span>
@@ -113,7 +114,7 @@ export const Isotropic8192Turbulence: FC = () => {
             <br />
           </span >
           <span>
-            ✪  Viscosity, dissipation, RMS velocity, and Kolmogorov scale: see <Link href="http://turbulence.pha.jhu.edu/docs/README-isotropic8192.pdf">README-isotropic8192</Link>
+            ✪  Viscosity, dissipation, RMS velocity, and Kolmogorov scale: see <Link href={`${docsDownloadURL}README-isotropic8192.pdf`} target="_blank">README-isotropic8192</Link>
             <br />
             <br />
           </span>

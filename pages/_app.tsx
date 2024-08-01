@@ -18,6 +18,7 @@ import { ContextWrapper } from 'components/wrappers/Context';
 import Head from 'next/head';
 
 export const hostURL = `${process.env.NEXT_PUBLIC_HOST_BASE_PATH}`;
+export const docsDownloadURL = `${hostURL}docs/`;
 
 export default function App({ Component, pageProps }: AppProps) {
 

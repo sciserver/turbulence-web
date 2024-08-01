@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 import { AppContext } from 'context';
 import { BreadCrumbParent, BreadCrumbsStyled } from 'components/common/breadcrumbs';
+import { docsDownloadURL } from 'pages/_app';
 
 import mainImage from 'public/datasets/channel5200-vertical.png';
 
@@ -59,7 +60,7 @@ export const Channel5200: FC = () => {
         </div>
         <div className="content">
           <h3>Simulation data provenance: UT Austin using the UT Austin DNS code</h3>
-          <span className="caption">See <Link href="http://turbulence.pha.jhu.edu/docs/README-CHANNEL5200.pdf" target="_blank">README-CHANNEL5200</Link> for more details</span>
+          <span className="caption">See <Link href={`${docsDownloadURL}channel5200/README-CHANNEL5200.pdf`} target="_blank">README-CHANNEL5200</Link> for more details</span>
           <br />
           <br />
           <span>
@@ -98,13 +99,15 @@ export const Channel5200: FC = () => {
             <br />
           </span >
           <span>
-            ✪  The y-locations of the grid points in the vertical direction can be downloaded from <Link href="http://turbulence.pha.jhu.edu/docs/channel5200/channel5200-y.txt" target="_blank">this text file</Link>.
-            The corresponding B-spline knot locations can be obtained from <Link href="http://turbulence.pha.jhu.edu/docs/channel5200/channel5200-y-knots.txt" target="_blank">this text file</Link>.
+            ✪  The y-locations of the grid points in the vertical direction can be downloaded from <Link href={`${docsDownloadURL}channel5200/channel5200-y.txt`} target="_blank" download>this text file</Link>.
+            The corresponding B-spline knot locations can be obtained from <Link href={`${docsDownloadURL}channel5200/channel5200-y-knots.txt`} target="_blank" download>this text file</Link>.
             <br />
             <br />
           </span>
           <span>
-            ✪  Mean profiles of mean velocity, Reynolds stresses, vorticity variance, mean pressure, pressure variance, pressure-velocity covariance, terms in Reynolds stress transport equation and 1D energy spectra, can be found <Link href="https://turbulence.oden.utexas.edu/channel2015/content/Data_2015_5200.html" target="_blank">here</Link>.
+            ✪  Mean profiles of mean velocity, Reynolds stresses, vorticity variance, mean pressure, pressure variance,
+            pressure-velocity covariance, terms in Reynolds stress transport equation and 1D energy spectra,
+            can be found <Link href="https://turbulence.oden.utexas.edu/channel2015/content/Data_2015_5200.html" target="_blank">here</Link>.
             <br />
             <br />
           </span>

@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 import { AppContext } from 'context';
 import { BreadCrumbParent, BreadCrumbsStyled } from 'components/common/breadcrumbs';
+import { docsDownloadURL } from 'pages/_app';
 
 import mainImage from 'public/datasets/rstrt_0285_density.png';
 
@@ -59,7 +60,7 @@ export const BuoyancyTurbulence: FC = () => {
         </div>
         <div className="content">
           <h3>Simulation data provenance: Los Alamos National Laboratory using the LANL DNS code </h3>
-          <span className="caption">See <Link href="http://turbulence.pha.jhu.edu/docs/README-HBDT.pdf" target="_blank">README-HBDT</Link></span>
+          <span className="caption">See <Link href={`${docsDownloadURL}hbdt/README-HBDT.pdf`} target="_blank">README-HBDT</Link></span>
           <br />
           <br />
           <span>
@@ -118,7 +119,10 @@ export const BuoyancyTurbulence: FC = () => {
             <br />
           </span>
           <span>
-            ✪  A file with the time history of the Favre turbulent kinetic energy, k<sup>˜</sup> = &lt;ρu<sub>i</sub>''u<sub>i</sub>''&gt; ⁄ 2&lt;ρ&gt;, Reynolds stresses, R<sub>ii</sub> = &lt;ρu<sub>i</sub>''u<sub>i</sub>''&gt; (no summation over i), vertical mass flux, a<sub>v</sub> = &lt;ρu<sub>1</sub>'&gt; ⁄ &lt;ρ&gt;, turbulent Reynolds number, Re<sub>t</sub> = k<sup>˜</sup><sup>2</sup> ⁄ νε, eddy turnover time, τ = k<sup>˜</sup> ⁄ ε, kinetic energy dissipation, ε, density variance and density-specific volume correlation can be found <Link href="http://turbulence.pha.jhu.edu/docs/hbdt/data1.txt">here</Link>. <br />
+            ✪  A file with the time history of the Favre turbulent kinetic energy, k<sup>˜</sup> = &lt;ρu<sub>i</sub>''u<sub>i</sub>''&gt; ⁄ 2&lt;ρ&gt;, Reynolds stresses,
+            R<sub>ii</sub> = &lt;ρu<sub>i</sub>''u<sub>i</sub>''&gt; (no summation over i), vertical mass flux, a<sub>v</sub> = &lt;ρu<sub>1</sub>'&gt; ⁄ &lt;ρ&gt;,
+            turbulent Reynolds number, Re<sub>t</sub> = k<sup>˜</sup><sup>2</sup> ⁄ νε, eddy turnover time, τ = k<sup>˜</sup> ⁄ ε, kinetic energy dissipation, ε,
+            density variance and density-specific volume correlation can be found <Link href={`${docsDownloadURL}hbdt/data1.txt`} target="_blank" download>here</Link>. <br />
             < br />
             (Note: Until July 22, 2015, the time-history file that was posted on this site included the total kinetic energy instead of the Favre turbulent kinetic energy. The file posted since July 22, 2015 lists the Favre turbulent kinetic energy)
             < br />
@@ -126,24 +130,24 @@ export const BuoyancyTurbulence: FC = () => {
           </span >
           <span>
             ✪  Files with tables of the power spectra of density, 3 velocity components, and mass flux can be downloaded at the following times:
-            <Link href="http://turbulence.pha.jhu.edu/docs/hbdt/spectra1.txt" target="_blank"> 6.56</Link>,
-            <Link href="http://turbulence.pha.jhu.edu/docs/hbdt/spectra2.txt" target="_blank"> 11.4</Link>,
-            <Link href="http://turbulence.pha.jhu.edu/docs/hbdt/spectra3.txt" target="_blank"> 15.0</Link>,
-            <Link href="http://turbulence.pha.jhu.edu/docs/hbdt/spectra4.txt" target="_blank"> 20.0</Link>,
-            <Link href="http://turbulence.pha.jhu.edu/docs/hbdt/spectra5.txt" target="_blank"> 30.0</Link> and
-            <Link href="http://turbulence.pha.jhu.edu/docs/hbdt/spectra6.txt" target="_blank"> 40.0</Link>.
+            <Link href={`${docsDownloadURL}hbdt/spectra1.txt`} target="_blank" download> 6.56</Link>,
+            <Link href={`${docsDownloadURL}hbdt/spectra2.txt`} target="_blank" download> 11.4</Link>,
+            <Link href={`${docsDownloadURL}hbdt/spectra3.txt`} target="_blank" download> 15.0</Link>,
+            <Link href={`${docsDownloadURL}hbdt/spectra4.txt`} target="_blank" download> 20.0</Link>,
+            <Link href={`${docsDownloadURL}hbdt/spectra5.txt`} target="_blank" download> 30.0</Link> and
+            <Link href={`${docsDownloadURL}hbdt/spectra6.txt`} target="_blank" download> 40.0</Link>.
             <br />
             <br />
           </span>
           <span>
             ✪  Files with tables of the density PDF can be downloaded for the following times:
-            <Link href="http://turbulence.pha.jhu.edu/docs/hbdt/pdf1.txt" target="_blank"> 0.0</Link>,
-            <Link href="http://turbulence.pha.jhu.edu/docs/hbdt/pdf2.txt" target="_blank"> 6.56</Link>,
-            <Link href="http://turbulence.pha.jhu.edu/docs/hbdt/pdf3.txt" target="_blank"> 11.4</Link>,
-            <Link href="http://turbulence.pha.jhu.edu/docs/hbdt/pdf4.txt" target="_blank"> 15.0</Link>,
-            <Link href="http://turbulence.pha.jhu.edu/docs/hbdt/pdf5.txt" target="_blank"> 20.0</Link>,
-            <Link href="http://turbulence.pha.jhu.edu/docs/hbdt/pdf6.txt" target="_blank"> 30.0</Link> and
-            <Link href="http://turbulence.pha.jhu.edu/docs/hbdt/pdf7.txt" target="_blank"> 40.0</Link>.
+            <Link href={`${docsDownloadURL}hbdt/pdf1.txt`} target="_blank" download> 0.0</Link>,
+            <Link href={`${docsDownloadURL}hbdt/pdf2.txt`} target="_blank" download> 6.56</Link>,
+            <Link href={`${docsDownloadURL}hbdt/pdf3.txt`} target="_blank" download> 11.4</Link>,
+            <Link href={`${docsDownloadURL}hbdt/pdf4.txt`} target="_blank" download> 15.0</Link>,
+            <Link href={`${docsDownloadURL}hbdt/pdf5.txt`} target="_blank" download> 20.0</Link>,
+            <Link href={`${docsDownloadURL}hbdt/pdf6.txt`} target="_blank" download> 30.0</Link> and
+            <Link href={`${docsDownloadURL}hbdt/pdf7.txt`} target="_blank" download> 40.0</Link>.
             <br />
             <br />
           </span>
