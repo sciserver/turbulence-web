@@ -59,7 +59,7 @@ export const Publications: FC = () => {
   return (
     <Styled>
       {displayImage &&
-        <Image className="responsive" src={mainImage} height={450} alt="Publications" />
+        <Image className="responsive" src={mainImage} height={380} alt="Publications" />
       }
       <div className="content">
         <h1>Publications and abstracts</h1>
