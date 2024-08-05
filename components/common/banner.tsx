@@ -4,12 +4,16 @@ import { hostURL } from 'pages/_app';
 
 const Styled = styled.div<{ bannerwidth: number }>`  
   position: relative;
-  text-align: center;
   color: white;
-  background-image: url("${hostURL}Smokesheet-snapshot-JHTDB.mp4");
-  background-size: ${props => props.bannerwidth}px 200px;
   height: 200px;
   width: ${props => props.bannerwidth};
+  
+  video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: fill;
+  }
   
   h1
   {
@@ -39,6 +43,7 @@ export const Banner = () => {
   }, []);
 
   return <Styled {...{ bannerwidth }}>
+    <video src={`${hostURL}Smokesheet-snapshot-JHTDB.mp4`} autoPlay loop muted />
     <h1 className="centered">Johns Hopkins Turbulence Database</h1>
   </Styled>;
 };
