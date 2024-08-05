@@ -22,11 +22,15 @@ const Styled = styled.div`
     width: 90%;
   }
 
+  a {
+    word-break: break-all;
+  }
+
   iframe {
     border: none;
     width: auto;
-    width: 100%; 
     height: 145px; 
+    width: 100%; 
 
     .code {
       width: 4.5em; 
@@ -34,7 +38,7 @@ const Styled = styled.div`
       border 0; 
       transform: scale(1); 
       overflow: hidden;
-      }
+    }
   }
 
 `;
