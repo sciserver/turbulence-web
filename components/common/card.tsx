@@ -15,7 +15,7 @@ const StyledCard = styled(Card)`
     max-width: 550px;
   }
   @media only screen and (max-width: 600px) {
-    max-width: 300px;
+    max-width: 250px;
   }
     
     .actions {
@@ -30,7 +30,7 @@ const StyledCard = styled(Card)`
       }
       @media only screen and (max-width: 600px) {
         height: 140px; 
-        width: 300px;
+        width: 250;
       }
   }
   

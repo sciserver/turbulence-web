@@ -44,7 +44,7 @@ export const Banner = () => {
   }, []);
 
   return <Styled {...{ bannerwidth }}>
-    <video src={`${hostURL}Smokesheet-snapshot-JHTDB.mp4`} autoPlay loop muted />
+    <video src={`${hostURL}Smokesheet-snapshot-JHTDB.mp4`} autoPlay loop muted playsInline />
     <h1 className="centered">Johns Hopkins Turbulence Database</h1>
   </Styled>;
 };
