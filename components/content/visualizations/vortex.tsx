@@ -10,8 +10,8 @@ import { BreadCrumbParent, BreadCrumbsStyled } from 'components/common/breadcrum
 const Styled = styled.div`
   iframe {
     border: none;
-    height: 30rem;
-    width: 50rem;
+    height: 100%;
+    width: 90%;
   }
 
   p {

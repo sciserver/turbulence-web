@@ -9,6 +9,7 @@ const Styled = styled.div`
 
   p, blockquote {
     width: 85%;
+    word-break: break-all;
   }
   a {
     word-break: break-all;
