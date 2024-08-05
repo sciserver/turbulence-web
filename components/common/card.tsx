@@ -7,15 +7,33 @@ const StyledCard = styled(Card)`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  min-width: 450px;
-  max-width: 550px;
-  margin-right: 30px;
-  margin-bottom: 30px;  
-
-  .actions {
-    display: flex;
-    justify-content: flex-end;
+  margin-right: 1em;
+  margin-bottom: 1.5em;  
+  
+  @media only screen and (min-width: 600px) {
+    min-width: 450px;
+    max-width: 550px;
   }
+  @media only screen and (max-width: 600px) {
+    max-width: 300px;
+  }
+    
+    .actions {
+      display: flex;
+      justify-content: flex-end;
+    }
+      
+    .media {
+      @media only screen and (min-width: 600px) {
+        height: 140px; 
+        width: 550px;
+      }
+      @media only screen and (max-width: 600px) {
+        height: 140px; 
+        width: 300px;
+      }
+  }
+  
   &:hover {
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px 0px, rgba(0, 0, 0, 0.14) 0px 8px 10px 0px, rgba(0, 0, 0, 0.12) 0px 3px 14px 0px;
@@ -37,7 +55,7 @@ export const CardStyled: FC<CardLayout> = ({ title, onClick, description, type, 
     <StyledCard onClick={onClick} >
       {mediaSource &&
         <CardMedia
-          sx={{ height: 140, width: 550 }}
+          className="media"
           image={mediaSource}
         />
       }

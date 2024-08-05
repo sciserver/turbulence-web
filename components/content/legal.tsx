@@ -4,7 +4,8 @@ import styled from 'styled-components';
 
 const Styled = styled.div`
   p {
-    width: 80%;
+    width: 85%;
+    padding-bottom: 1em;
   }
 `;
 
@@ -13,7 +14,6 @@ export const Legal: FC = () => {
   return (
     <Styled>
       <h1>Disclaimer</h1>
-      <br />
       <p>
         While many efforts have been made to ensure that these data are accurate and reliable
         within the limits of the current state of the art, neither JHU nor any other party
@@ -25,7 +25,6 @@ export const Legal: FC = () => {
         <br />
         Last update: 7/5/2024 6:59:40 PM
       </p>
-
     </Styled>
   );
 };

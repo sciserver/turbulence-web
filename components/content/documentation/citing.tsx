@@ -6,15 +6,19 @@ import { docsDownloadURL } from 'pages/_app';
 
 
 const Styled = styled.div`
- p, blockquote {
-  width: 80%;
- }
+
+  p, blockquote {
+    width: 85%;
+  }
+  a {
+    word-break: break-all;
+  }
 `;
 
 export const Citing: FC = () => {
   return (
     <Styled>
-      <h2>Citing the database in your work</h2>
+      <h1>Citing the database in your work</h1>
 
       <p>
         The <strong>JH Turbulence Database </strong>(JHTDB) is developed as an open resource by the Johns Hopkins University,

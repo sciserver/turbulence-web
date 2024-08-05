@@ -39,7 +39,12 @@ export const TabMenu: FC = () => {
   ];
 
   return (
-    <StyledTabs value={tabOption} onChange={handleTabChange} centered color="secondary">
+    <StyledTabs
+      value={tabOption}
+      onChange={handleTabChange}
+      centered
+      color="secondary"
+      sx={{ '& .MuiTabs-flexContainer': { flexWrap: 'wrap' } }}>
       {tabOptions.map(tab =>
         <StyledTab key={tab.name} label={tab.name} value={tab.value} onClick={tabOption === tab.value ? handleSameOptionClick : () => { }} />
       )}

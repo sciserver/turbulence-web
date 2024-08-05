@@ -25,12 +25,12 @@ const Styled = styled.div`
   iframe {
     border: none;
     width: auto;
-    width: 450px; 
+    width: 100%; 
     height: 145px; 
 
     .code {
-      width: 450px; 
-      height: 145px; 
+      width: 4.5em; 
+      height: 1.45em; 
       border 0; 
       transform: scale(1); 
       overflow: hidden;

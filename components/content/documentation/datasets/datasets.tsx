@@ -10,7 +10,7 @@ import { CardLayout, CardStyled } from 'components/common/card';
 const Styled = styled.div`
     .card-list {
     display: flex;  
-    flex-wrap: wrap;
+    flex-wrap: no-wrap;
 
     margin-top: 20px;
   }
@@ -32,7 +32,7 @@ export const Datasets: FC = () => {
       title: 'Homogeneous Turbulence',
       subtitle: 'Direct  Numerical Simulations',
       onClick: () => {
-        router.push('/datasets/homogeneousTurbulence'); 
+        router.push('/datasets/homogeneousTurbulence');
       },
       mediaSource: `${hostURL}datasets/homogeneousTurbulence.png`
 
@@ -41,7 +41,7 @@ export const Datasets: FC = () => {
       title: 'Wall Bounded Turbulence ',
       subtitle: 'Direct  Numerical Simulations',
       onClick: () => {
-        router.push('/datasets/wallBoundedTurbulence'); 
+        router.push('/datasets/wallBoundedTurbulence');
       },
       mediaSource: `${hostURL}datasets/wallBoundedTurbulence.png`
 
@@ -50,7 +50,7 @@ export const Datasets: FC = () => {
       title: 'Geophysical Turbulence ',
       subtitle: 'DNS and Large Eddy Simulations',
       onClick: () => {
-        router.push('/datasets/geophysicalTurbulence'); 
+        router.push('/datasets/geophysicalTurbulence');
       },
       mediaSource: `${hostURL}datasets/geophysicalTurbulence.png`
 
@@ -59,7 +59,7 @@ export const Datasets: FC = () => {
       title: 'Windfarms (coming soon)',
       subtitle: 'Large Eddy Simulations',
       onClick: () => {
-        router.push('/datasets/windfarms'); 
+        router.push('/datasets/windfarms');
       }
     }
   ];

@@ -11,11 +11,11 @@ import { useRouter } from 'next/router';
 const Styled = styled.footer<{ footerwidth: number }>`  
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 0.3em;
   bottom: 0px;
   left: 0px;
   right: 0px;
-  margin-bottom: 50px;
+  margin-bottom: 1em;
   width: ${props => props.footerwidth};
   height: auto;
   
@@ -28,21 +28,20 @@ const Styled = styled.footer<{ footerwidth: number }>`
   .agencies {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 1.5em;
     align-items: center;
+    justify-content: center;
   }
 
   .info {
-    @media (width >= 800px)  {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      gap: 100px;
-    }
-    padding: 30px 150px;
-    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1em;
+    padding: 1em 1.50em;
     
     background: linear-gradient(90deg, rgb(206,214, 242) 1%, rgb(50, 72, 150, 0.8) 60%,rgb(186, 57, 64,0.6) 100%);
+    color: white;
     
     h2:hover {
       cursor: pointer;

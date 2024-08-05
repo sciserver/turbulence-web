@@ -21,6 +21,7 @@ const Styled = styled.div<{ bannerwidth: number }>`
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
+    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
