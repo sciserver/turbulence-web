@@ -64,7 +64,7 @@ export const PythonLocal: FC = () => {
         <div>
           <h1>Python Local</h1>
           <br />
-          <h3><Link href="https://github.com/sciserver/giverny/raw/master/DEMO_notebooks/DEMO_local_python_notebooks.zip" target="_blank">Download</Link> a Python notebook Getdata_JHTDB_2.ipynb</h3>
+          <h3><Link href="https://github.com/sciserver/giverny/raw/master/DEMO_notebooks/DEMO_local_python_notebooks.zip" target="_blank">Download</Link> a Python notebook DEMO_Getdata_local.ipynb</h3>
           <p>
             <Link href="https://github.com/sciserver/giverny/tree/master" target="_blank">Direct link to github repository </Link> containing the <strong>Getdata_JHTDB_2.ipynb </strong>
             file, as well as other codes being run on the JHTDB backend.
