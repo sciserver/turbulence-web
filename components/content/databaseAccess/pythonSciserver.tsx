@@ -66,8 +66,8 @@ export const PythonSciserver: FC = () => {
           <br />
           <h3><Link href="https://github.com/sciserver/giverny/raw/master/DEMO_notebooks/DEMO_SciServer_python_notebooks.zip" target="_blank">Download</Link> a folder with 2 Python notebooks</h3>
           <p>
-            <Link href="https://github.com/sciserver/giverny/tree/master" target="_blank">Direct link to github repository </Link>  containing the <strong>Getdata_JHTDB_2.ipynb </strong>
-            file, as well as other codes being run on the JHTDB backend.
+            <Link href="https://github.com/sciserver/giverny/tree/master" target="_blank">Direct link to github repository </Link>  containing <strong>DEMO_Getdata_SciServer.ipynb </strong>
+            and <strong>DEMO_Getcutout_SciServer.ipynb </strong>files, as well as other codes being run on the JHTDB backend.
           </p>
           <p>
             <strong>Overview:</strong>  The DEMO Python code illustrates sampling velocities on arrays of points

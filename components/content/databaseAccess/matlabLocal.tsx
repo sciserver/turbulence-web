@@ -72,7 +72,7 @@ export const MatlabLocal: FC = () => {
             <strong>(2)</strong> The getData.m function which is called by Getdata_JHTDB_2.m and interfaces with JHTDB REST service.
           </p>
           <p>
-            <Link href="https://github.com/sciserver/giverny/tree/master" target="_blank">Direct link to github repository </Link> containing the <strong>Getdata_JHTDB_2.m</strong> and <strong>getData.m </strong>
+            <Link href="https://github.com/sciserver/giverny/tree/master" target="_blank">Direct link to github repository </Link> containing <strong>Getdata_JHTDB_2.m</strong> and <strong>getData.m </strong>
             files, as well as other codes being run on the JHTDB backend.
           </p>
           <p>
